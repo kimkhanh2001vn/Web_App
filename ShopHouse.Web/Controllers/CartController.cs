@@ -51,12 +51,12 @@ namespace ShopHouse.Web.Controllers
                 PhoneNumber = request.checkOut.PhoneNumber
             };
             //TODO:Add to API
-            var orders = await _orderApiClient.CreateOrder(request.checkOut);
-            if (orders != null)
-            {
-                return Redirect("");
-            }
-            ViewBag["success"] = "Order Successful";
+            //var orders = await _orderApiClient.CreateOrder(request.checkOut);
+            //if (orders != null)
+            //{
+            //    return Redirect("");
+            //}
+            TempData["SuccessMsg"] = "Order puschased successful";
             return View(model);
         }
         [HttpGet]
