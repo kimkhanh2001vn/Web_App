@@ -1,0 +1,13 @@
+D:\Frameword core\ShopHouse\ShopHouse.Data\bin\Debug\netcoreapp3.1\ShopHouse.Data.deps.json
+D:\Frameword core\ShopHouse\ShopHouse.Data\bin\Debug\netcoreapp3.1\ShopHouse.Data.runtimeconfig.json
+D:\Frameword core\ShopHouse\ShopHouse.Data\bin\Debug\netcoreapp3.1\ShopHouse.Data.runtimeconfig.dev.json
+D:\Frameword core\ShopHouse\ShopHouse.Data\bin\Debug\netcoreapp3.1\ShopHouse.Data.dll
+D:\Frameword core\ShopHouse\ShopHouse.Data\bin\Debug\netcoreapp3.1\ShopHouse.Data.pdb
+D:\Frameword core\ShopHouse\ShopHouse.Data\obj\Debug\netcoreapp3.1\ShopHouse.Data.csproj.AssemblyReference.cache
+D:\Frameword core\ShopHouse\ShopHouse.Data\obj\Debug\netcoreapp3.1\ShopHouse.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Frameword core\ShopHouse\ShopHouse.Data\obj\Debug\netcoreapp3.1\ShopHouse.Data.AssemblyInfoInputs.cache
+D:\Frameword core\ShopHouse\ShopHouse.Data\obj\Debug\netcoreapp3.1\ShopHouse.Data.AssemblyInfo.cs
+D:\Frameword core\ShopHouse\ShopHouse.Data\obj\Debug\netcoreapp3.1\ShopHouse.Data.csproj.CoreCompileInputs.cache
+D:\Frameword core\ShopHouse\ShopHouse.Data\obj\Debug\netcoreapp3.1\ShopHouse.Data.dll
+D:\Frameword core\ShopHouse\ShopHouse.Data\obj\Debug\netcoreapp3.1\ShopHouse.Data.pdb
+D:\Frameword core\ShopHouse\ShopHouse.Data\obj\Debug\netcoreapp3.1\ShopHouse.Data.genruntimeconfig.cache

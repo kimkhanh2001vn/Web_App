@@ -1,0 +1,10 @@
+D:\Frameword core\ShopHouse\ShopHouse.Utilities\bin\Debug\netcoreapp3.1\ShopHouse.Utilities.deps.json
+D:\Frameword core\ShopHouse\ShopHouse.Utilities\bin\Debug\netcoreapp3.1\ShopHouse.Utilities.dll
+D:\Frameword core\ShopHouse\ShopHouse.Utilities\bin\Debug\netcoreapp3.1\ShopHouse.Utilities.pdb
+D:\Frameword core\ShopHouse\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.csproj.AssemblyReference.cache
+D:\Frameword core\ShopHouse\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Frameword core\ShopHouse\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.AssemblyInfoInputs.cache
+D:\Frameword core\ShopHouse\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.AssemblyInfo.cs
+D:\Frameword core\ShopHouse\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.csproj.CoreCompileInputs.cache
+D:\Frameword core\ShopHouse\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.dll
+D:\Frameword core\ShopHouse\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.pdb

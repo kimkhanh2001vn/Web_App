@@ -1,0 +1,218 @@
+﻿@model ProductDetailViewModel
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var culture = CultureInfo.CurrentCulture.Name;
+}
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration;
+@inject LazZiya.ExpressLocalization.ISharedCultureLocalizer _loc;
+<section class="page-info new-block">
+    <div class="fixed-bg" style="background: url('images/info-bg.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="container">
+        <h2 localize-content>Domnoo Detail</h2>
+        <div class="clear-fix"></div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" localize-content>Home</a></li>
+            <li class="breadcrumb-item active"><a href="#" localize-content>Detail</a></li>
+        </ol>
+    </div>
+</section>
+
+<section class="about-product new-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="img-holder">
+                    <a href="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)" title="@Model.Product.Name">
+                        <img src="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)" style="width:100%" alt="@Model.Product.Name" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="block-stl6">
+                    <h2>@Model.Product.Name <span class="veg veg-nonveg"></span></h2>
+                    <p class="price"><span>@Html.FormatValue(Model.Product.OriginalPrice, "{0:#,##0.00}")</span> <small>@Html.FormatValue(Model.Product.Price, "{0:#,##0.00}")</small> </p>
+                    <p class="rating-star"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <span>( 245 Ratings & 355 Reviews )</span> </p>
+                    <p class="ab-txt">@Model.Product.Description</p>
+                    <form action="#">
+                        <div class="form-block">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Size :</label>
+                                        <select class="c_select">
+                                            <option value="">Large</option>
+                                            <option value="">Medium</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Add toppings :</label>
+                                        <select class="c_select">
+                                            <option value="">Veggies</option>
+                                            <option value="">Medium</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Crust :</label>
+                                        <select class="c_select">
+                                            <option value="">Pan</option>
+                                            <option value="">Medium</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Qty :</label>
+                                        <select class="c_select">
+                                            <option value="">01</option>
+                                            <option value="">02</option>
+                                            <option value="">03</option>
+                                            <option value="">04</option>
+                                            <option value="">05</option>
+                                            <option value="">06</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group btn-block">
+                                        <a href="#" class="btn1 stl2">buy now</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="form-group btn-block">
+                                        <a href="#" class="btn1 stl1">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</section>
+
+<div class="center-wrapper new-block">
+    <div class="fixed-bg parallax" style="background: url('images/ptrn1.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="inner-wrapper">
+        <section class="about-product-block new-block">
+            <div class="container">
+                <div class="block-stl7">
+                    <h4 localize-content>About us :</h4>
+                    <p>
+                        @Model.Product.Details
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products new-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title">
+                            <p class="top-h">winter special offer</p>
+                            <h2>related products</h2>
+                            <div class="btm-style"><span><img src="images/btm-style.png" alt="" class="img-responsive"></span></div>
+                            <p class="bottom-p">Lorem ipsum dolor sit amet consectetur adipiscing elit. <br>Curabitur erat turpis posuere ac ante at</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="item-slider2 owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="block-stl2">
+                                    <div class="img-holder">
+                                        <img src="images/img.png" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="text-block">
+                                        <h3>Veggie Supreme</h3>
+                                        <p class="sz">Size : Regular</p>
+                                        <p class="price"><span>$6.00</span> <del>$8.00 40% off</del></p>
+                                    </div>
+                                    <div class="btn-sec">
+                                        <a href="product_single.html" class="btn4">About More</a>
+                                        <a href="shopping_cart.html" class="btn4">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="block-stl2">
+                                    <div class="img-holder">
+                                        <img src="images/img3.png" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="text-block">
+                                        <h3>Veggie Supreme</h3>
+                                        <p class="sz">Size : Regular</p>
+                                        <p class="price"><span>$6.00</span> <del>$8.00 40% off</del></p>
+                                    </div>
+                                    <div class="btn-sec">
+                                        <a href="product_single.html" class="btn4">About More</a>
+                                        <a href="shopping_cart.html" class="btn4">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="block-stl2">
+                                    <div class="img-holder">
+                                        <img src="images/img4.png" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="text-block">
+                                        <h3>Veggie Supreme</h3>
+                                        <p class="sz">Size : Regular</p>
+                                        <p class="price"><span>$6.00</span> <del>$8.00 40% off</del></p>
+                                    </div>
+                                    <div class="btn-sec">
+                                        <a href="product_single.html" class="btn4">About More</a>
+                                        <a href="shopping_cart.html" class="btn4">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="block-stl2">
+                                    <div class="img-holder">
+                                        <img src="images/img2.png" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="text-block">
+                                        <h3>Veggie Supreme</h3>
+                                        <p class="sz">Size : Regular</p>
+                                        <p class="price"><span>$6.00</span> <del>$8.00 40% off</del></p>
+                                    </div>
+                                    <div class="btn-sec">
+                                        <a href="product_single.html" class="btn4">About More</a>
+                                        <a href="shopping_cart.html" class="btn4">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="block-stl2">
+                                    <div class="img-holder">
+                                        <img src="images/img5.png" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="text-block">
+                                        <h3>Veggie Supreme</h3>
+                                        <p class="sz">Size : Regular</p>
+                                        <p class="price"><span>$6.00</span> <del>$8.00 40% off</del></p>
+                                    </div>
+                                    <div class="btn-sec">
+                                        <a href="product_single.html" class="btn4">About More</a>
+                                        <a href="shopping_cart.html" class="btn4">Add to Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+</div>

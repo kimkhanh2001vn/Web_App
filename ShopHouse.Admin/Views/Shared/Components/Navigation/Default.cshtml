@@ -1,0 +1,14 @@
+﻿@model NavigationViewModel
+<li class="nav-item dropdown no-arrow">
+    <form id="frmChangeLanguage" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100" action="/home/Language" method="post">
+        <input type="hidden"  name="ReturnUrl" value="@Context.Request.Path"/>
+        <div class="nav-link">
+            <select class="form-control form-control-user" 
+                    onchange="this.form.submit()"
+                    asp-for="CurrentLanguegaId" 
+                    asp-items="@(new SelectList(Model.languages,"ID","Name",Model.CurrentLanguegaId))">
+            </select>
+        </div>
+    </form>
+</li>
+

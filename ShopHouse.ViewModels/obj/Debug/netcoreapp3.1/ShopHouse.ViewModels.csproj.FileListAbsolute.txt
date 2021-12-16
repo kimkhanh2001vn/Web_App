@@ -1,0 +1,13 @@
+D:\Frameword core\ShopHouse\ShopHouse.ViewModels\bin\Debug\netcoreapp3.1\ShopHouse.ViewModels.deps.json
+D:\Frameword core\ShopHouse\ShopHouse.ViewModels\bin\Debug\netcoreapp3.1\ShopHouse.ViewModels.dll
+D:\Frameword core\ShopHouse\ShopHouse.ViewModels\bin\Debug\netcoreapp3.1\ShopHouse.ViewModels.pdb
+D:\Frameword core\ShopHouse\ShopHouse.ViewModels\bin\Debug\netcoreapp3.1\ShopHouse.Data.dll
+D:\Frameword core\ShopHouse\ShopHouse.ViewModels\bin\Debug\netcoreapp3.1\ShopHouse.Data.pdb
+D:\Frameword core\ShopHouse\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.csproj.AssemblyReference.cache
+D:\Frameword core\ShopHouse\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\Frameword core\ShopHouse\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.AssemblyInfoInputs.cache
+D:\Frameword core\ShopHouse\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.AssemblyInfo.cs
+D:\Frameword core\ShopHouse\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.csproj.CoreCompileInputs.cache
+D:\Frameword core\ShopHouse\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.csproj.CopyComplete
+D:\Frameword core\ShopHouse\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.dll
+D:\Frameword core\ShopHouse\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.pdb

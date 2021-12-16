@@ -1,0 +1,47 @@
+﻿@model ShopHouse.ViewModels.System.Users.RoleAssignRequest
+
+@{
+    ViewData["Title"] = "Gắn quyền";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="mt-3 mb-2">
+        <h3 class="h3 mb-2 text-gray-800">
+            Gán quyền Người Dùng
+        </h3>
+    </div>
+
+    <p class="mb-4">
+
+    </p>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <a class="btn btn-outline-info" asp-action="Index">Trở lại</a>
+        </div>
+        <div class="card-body">
+            <form asp-action="RoleAssign">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="ID" />
+                @for (int i = 0; i < Model.Roles.Count(); i++)
+                {
+                    <div class="form-group">
+                        <label>
+                            @Model.Roles[i].Name
+                            <input type="checkbox" asp-for="Roles[i].Selected" />
+                            <input type="hidden" asp-for="Roles[i].ID" />
+                            <input type="hidden" asp-for="Roles[i].Name" />
+                        </label>
+                    </div>
+                }
+                <div class="form-group">
+                    <input type="submit" value="Lưu Lại" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

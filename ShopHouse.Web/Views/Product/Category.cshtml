@@ -1,0 +1,113 @@
+﻿@model ProductCategoryViewModel
+@{
+    ViewData["Title"] = "Category";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var culture = CultureInfo.CurrentCulture.Name; 
+}
+@inject LazZiya.ExpressLocalization.ISharedCultureLocalizer _loc;
+<section class="page-info new-block">
+    <div class="fixed-bg" style="background: url('images/info-bg.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="container">
+        <h2>Domnoo menu</h2>
+        <div class="clear-fix"></div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active"><a href="#">Library</a></li>
+        </ol>
+    </div>
+</section><!-- banner -->
+
+
+<section class="domnoo-menu-filter2 list-grid-sec new-block">
+    <div class="fixed-bg parallax" style="background-image: url(/images/ptrn1.jpg);"></div>
+    <div class="overlay"></div>
+    @await Component.InvokeAsync("SideBarLeft")
+
+    <div class="col2">
+        <div class="grid" id="grid">
+            @for (int i = 0; i < Model.Products.Items.Count; i++)
+            {
+                var item = Model.Products.Items[i];
+                var url = $"/{culture}/{_loc["productUrl"]}/{item.Id}";
+                <div class="items-for-flr pizza" data-newest="1" data-popularity="5" data-price="6.00">
+                    <div class="block-stl2">
+                        <div class="img-holder">
+                            <img src="images/img3.png" alt="@item.Name" class="img-responsive">
+                        </div>
+                        <div class="text-block">
+                            <h3>@item.Name</h3>
+                            <p class="sz">Size : Regular</p>
+                            <p class="price"><span>@Html.FormatValue(item.Price, "{0:#,##0.00}")</span></p>
+                        </div>
+                        <div class="btn-sec">
+                            <a href="@url" class="btn4" localize-content>About More</a>
+                            <a href="#" class="btn4 btn-add-cart" data-id="@item.Id" localize-content>Add to Cart</a>
+                        </div>
+                        <span class="nonveg veg-nonveg"></span>
+                    </div>
+
+                    <div class="block-stl2_dsn2 md2">
+                        <div class="img-holder">
+                            <img src="images/img3.png" alt="" class="img-responsive">
+                        </div>
+                        <div class="text-block">
+                            <h3>@item.Name</h3>
+                            <p class="sz">Size : Regular</p>
+                            <p class="price"><span>@Html.FormatValue(item.OriginalPrice, "{0:#,##0.00}")</span> <del>@Html.FormatValue(item.Price, "{0:#,##0.00}")</del></p>
+                            <div class="btn-sec">
+                                <a href="@url" class="btn4" localize-content>About More</a>
+                                <a href="#" class="btn4" localize-content>Add to Cart</a>
+                            </div>
+                        </div>
+                        <span class="nonveg veg-nonveg"></span>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+
+    <div class="clearfix"></div>
+    @*<div class="container text-center">
+            <div class="pegination-block">
+                <ul class="pagination">
+                    <li><a href="#"><i class="flaticon-left-arrow"></i></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#"><i class="flaticon-right-arrow"></i></a></li>
+                </ul>
+            </div>
+        </div>*@
+    @await Component.InvokeAsync("Pager", Model.Products)
+</section>
+<!-- .domnoo-menu-filter -->
+
+
+<section class="amezing-offers new-block">
+    <div class="overlay"></div>
+    <div class="fixed-bg parallax" style="background: url('/images/bg1.png');"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="img-holder">
+                    <img src="images/pz1.png" alt="" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="text-block-stl1">
+                    <div class="title">
+                        <p class="top-h">amazing offers online</p>
+                        <h2>50% off pizzas online</h2>
+                        <p class="bottom-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare placerat tellus sit amet ullamcorper.</p>
+                        <a href="#" class="btn1 stl2" localize-content>buy now</a>
+                        <a href="#" class="btn1 stl1" localize-content>about more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="System.Text.Encoding" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShopHouse.Data\ShopHouse.Data.csproj" />
+    <ProjectReference Include="..\ShopHouse.Utilities\ShopHouse.Utilities.csproj" />
+    <ProjectReference Include="..\ShopHouse.ViewModels\ShopHouse.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>
