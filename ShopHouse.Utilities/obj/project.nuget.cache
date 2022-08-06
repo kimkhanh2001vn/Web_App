@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "vq78e0VaTSrQ9iP/1zqV0NkLaAGw6ltdQBgO6zNmyqa7fNERO8+fcbDJOYuPqtITn7qFIJXUc4ETb5T2goiUxw==",
+  "dgSpecHash": "PjQZvvjUjkLivwWeFZ7JsLMy0lcC12b1Xwt6BKJCQuH2rQyD/dvQpwxTJSUNcGotnG4vkNWheHbi40cisDQoPg==",
   "success": true,
   "projectFilePath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

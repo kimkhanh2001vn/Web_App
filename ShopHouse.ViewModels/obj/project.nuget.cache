@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "N8xc7Tr3KZwa7ZrXF5EuJqKdPouKxIZzDFHkj7CNL3dtwFM5/Fg3edE9kSD83X2stDaZQFvnCIRhHTXj9lhndA==",
+  "dgSpecHash": "ofAYpLS+5VUPlA4xi7SQWQWXB1CZMdqCHoeWbVNYFCG6CHREVhP0TO/9H1Z0MiW0n2foeyakzmgSBbQwEB2iww==",
   "success": true,
   "projectFilePath": "D:\\Frameword core\\ShopHouse\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj",
   "expectedPackageFiles": [
@@ -114,7 +114,10 @@
     "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
   ],
   "logs": []
 }

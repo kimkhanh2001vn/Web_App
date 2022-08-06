@@ -181,7 +181,6 @@ D:\Frameword core\ShopHouse\ShopHouse.Web\obj\Debug\netcoreapp3.1\en\ShopHouse.W
 D:\Frameword core\ShopHouse\ShopHouse.Web\obj\Debug\netcoreapp3.1\vi\ShopHouse.Web.resources.dll
 D:\Frameword core\ShopHouse\ShopHouse.Web\obj\Debug\netcoreapp3.1\staticwebassets\ShopHouse.Web.StaticWebAssets.Manifest.cache
 D:\Frameword core\ShopHouse\ShopHouse.Web\obj\Debug\netcoreapp3.1\staticwebassets\ShopHouse.Web.StaticWebAssets.xml
-D:\Frameword core\ShopHouse\ShopHouse.Web\obj\Debug\netcoreapp3.1\scopedcss\bundle\ShopHouse.Web.styles.css
 D:\Frameword core\ShopHouse\ShopHouse.Web\obj\Debug\netcoreapp3.1\ShopHouse.Web.TagHelpers.input.cache
 D:\Frameword core\ShopHouse\ShopHouse.Web\obj\Debug\netcoreapp3.1\ShopHouse.Web.TagHelpers.output.cache
 D:\Frameword core\ShopHouse\ShopHouse.Web\obj\Debug\netcoreapp3.1\ShopHouse.Web.RazorCoreGenerate.cache

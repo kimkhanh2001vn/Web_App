@@ -82,8 +82,6 @@ D:\Frameword core\ShopHouse\ShopHouse.BackendApi\obj\Debug\netcoreapp3.1\ShopHou
 D:\Frameword core\ShopHouse\ShopHouse.BackendApi\obj\Debug\netcoreapp3.1\ShopHouse.BackendApi.MvcApplicationPartsAssemblyInfo.cs
 D:\Frameword core\ShopHouse\ShopHouse.BackendApi\obj\Debug\netcoreapp3.1\ShopHouse.BackendApi.MvcApplicationPartsAssemblyInfo.cache
 D:\Frameword core\ShopHouse\ShopHouse.BackendApi\obj\Debug\netcoreapp3.1\staticwebassets\ShopHouse.BackendApi.StaticWebAssets.Manifest.cache
-D:\Frameword core\ShopHouse\ShopHouse.BackendApi\obj\Debug\netcoreapp3.1\staticwebassets\ShopHouse.BackendApi.StaticWebAssets.xml
-D:\Frameword core\ShopHouse\ShopHouse.BackendApi\obj\Debug\netcoreapp3.1\scopedcss\bundle\ShopHouse.BackendApi.styles.css
 D:\Frameword core\ShopHouse\ShopHouse.BackendApi\obj\Debug\netcoreapp3.1\ShopHouse.BackendApi.RazorTargetAssemblyInfo.cache
 D:\Frameword core\ShopHouse\ShopHouse.BackendApi\obj\Debug\netcoreapp3.1\ShopHouse.BackendApi.csproj.CopyComplete
 D:\Frameword core\ShopHouse\ShopHouse.BackendApi\obj\Debug\netcoreapp3.1\ShopHouse.BackendApi.dll
