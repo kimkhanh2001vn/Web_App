@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Frameword core\\ShopHouse\\ShopHouse.Web\\ShopHouse.Web.csproj": {}
+    "F:\\Web_App\\ShopHouse.Web\\ShopHouse.Web.csproj": {}
   },
   "projects": {
-    "D:\\Frameword core\\ShopHouse\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj": {
+    "F:\\Web_App\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Frameword core\\ShopHouse\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj",
+        "projectUniqueName": "F:\\Web_App\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj",
         "projectName": "ShopHouse.ApiIntegration",
-        "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj",
-        "packagesPath": "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\",
-        "outputPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.ApiIntegration\\obj\\",
+        "projectPath": "F:\\Web_App\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "F:\\Web_App\\ShopHouse.ApiIntegration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\NGO KIM KHANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,14 +32,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Frameword core\\ShopHouse\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj": {
-                "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj"
+              "F:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj": {
+                "projectPath": "F:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj"
               },
-              "D:\\Frameword core\\ShopHouse\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
-                "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
+              "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
+                "projectPath": "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
               },
-              "D:\\Frameword core\\ShopHouse\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
-                "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
+              "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
+                "projectPath": "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
               }
             }
           }
@@ -81,7 +81,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -104,24 +105,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Frameword core\\ShopHouse\\ShopHouse.Application\\ShopHouse.Application.csproj": {
+    "F:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Frameword core\\ShopHouse\\ShopHouse.Application\\ShopHouse.Application.csproj",
+        "projectUniqueName": "F:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj",
         "projectName": "ShopHouse.Application",
-        "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Application\\ShopHouse.Application.csproj",
-        "packagesPath": "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\",
-        "outputPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Application\\obj\\",
+        "projectPath": "F:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "F:\\Web_App\\ShopHouse.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\NGO KIM KHANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -136,14 +137,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Frameword core\\ShopHouse\\ShopHouse.Data\\ShopHouse.Data.csproj": {
-                "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Data\\ShopHouse.Data.csproj"
+              "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
+                "projectPath": "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj"
               },
-              "D:\\Frameword core\\ShopHouse\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
-                "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
+              "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
+                "projectPath": "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
               },
-              "D:\\Frameword core\\ShopHouse\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
-                "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
+              "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
+                "projectPath": "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
               }
             }
           }
@@ -169,10 +170,25 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -181,24 +197,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Frameword core\\ShopHouse\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj": {
+    "F:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Frameword core\\ShopHouse\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj",
+        "projectUniqueName": "F:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj",
         "projectName": "ShopHouse.BackendApi",
-        "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj",
-        "packagesPath": "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\",
-        "outputPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.BackendApi\\obj\\",
+        "projectPath": "F:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "F:\\Web_App\\ShopHouse.BackendApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\NGO KIM KHANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -213,17 +229,17 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Frameword core\\ShopHouse\\ShopHouse.Application\\ShopHouse.Application.csproj": {
-                "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Application\\ShopHouse.Application.csproj"
+              "F:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj": {
+                "projectPath": "F:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj"
               },
-              "D:\\Frameword core\\ShopHouse\\ShopHouse.Data\\ShopHouse.Data.csproj": {
-                "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Data\\ShopHouse.Data.csproj"
+              "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
+                "projectPath": "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj"
               },
-              "D:\\Frameword core\\ShopHouse\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
-                "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
+              "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
+                "projectPath": "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
               },
-              "D:\\Frameword core\\ShopHouse\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
-                "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
+              "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
+                "projectPath": "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
               }
             }
           }
@@ -257,7 +273,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -268,7 +285,7 @@
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.27, 3.1.27]"
+              "version": "[3.1.32, 3.1.32]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
@@ -287,24 +304,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Frameword core\\ShopHouse\\ShopHouse.Data\\ShopHouse.Data.csproj": {
+    "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Frameword core\\ShopHouse\\ShopHouse.Data\\ShopHouse.Data.csproj",
+        "projectUniqueName": "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj",
         "projectName": "ShopHouse.Data",
-        "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Data\\ShopHouse.Data.csproj",
-        "packagesPath": "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\",
-        "outputPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Data\\obj\\",
+        "projectPath": "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "F:\\Web_App\\ShopHouse.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\NGO KIM KHANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -337,7 +354,6 @@
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.21, )"
             },
@@ -366,7 +382,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -389,24 +406,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Frameword core\\ShopHouse\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
+    "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Frameword core\\ShopHouse\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj",
+        "projectUniqueName": "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj",
         "projectName": "ShopHouse.Utilities",
-        "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj",
-        "packagesPath": "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\",
-        "outputPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Utilities\\obj\\",
+        "projectPath": "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "F:\\Web_App\\ShopHouse.Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\NGO KIM KHANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -438,7 +455,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -461,24 +479,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Frameword core\\ShopHouse\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
+    "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Frameword core\\ShopHouse\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj",
+        "projectUniqueName": "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj",
         "projectName": "ShopHouse.ViewModels",
-        "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj",
-        "packagesPath": "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\",
-        "outputPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.ViewModels\\obj\\",
+        "projectPath": "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "F:\\Web_App\\ShopHouse.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\NGO KIM KHANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -493,8 +511,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Frameword core\\ShopHouse\\ShopHouse.Data\\ShopHouse.Data.csproj": {
-                "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Data\\ShopHouse.Data.csproj"
+              "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
+                "projectPath": "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj"
               }
             }
           }
@@ -524,7 +542,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -547,24 +566,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Frameword core\\ShopHouse\\ShopHouse.Web\\ShopHouse.Web.csproj": {
+    "F:\\Web_App\\ShopHouse.Web\\ShopHouse.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Frameword core\\ShopHouse\\ShopHouse.Web\\ShopHouse.Web.csproj",
+        "projectUniqueName": "F:\\Web_App\\ShopHouse.Web\\ShopHouse.Web.csproj",
         "projectName": "ShopHouse.Web",
-        "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Web\\ShopHouse.Web.csproj",
-        "packagesPath": "C:\\Users\\NGO KIM KHANH\\.nuget\\packages\\",
-        "outputPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.Web\\obj\\",
+        "projectPath": "F:\\Web_App\\ShopHouse.Web\\ShopHouse.Web.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "F:\\Web_App\\ShopHouse.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\NGO KIM KHANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -579,8 +598,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Frameword core\\ShopHouse\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj": {
-                "projectPath": "D:\\Frameword core\\ShopHouse\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj"
+              "F:\\Web_App\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj": {
+                "projectPath": "F:\\Web_App\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj"
               }
             }
           }
@@ -630,7 +649,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -641,7 +661,7 @@
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.27, 3.1.27]"
+              "version": "[3.1.32, 3.1.32]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
@@ -660,7 +680,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

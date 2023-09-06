@@ -8,3 +8,12 @@ D:\Frameword core\ShopHouse\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHous
 D:\Frameword core\ShopHouse\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.csproj.CoreCompileInputs.cache
 D:\Frameword core\ShopHouse\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.dll
 D:\Frameword core\ShopHouse\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.pdb
+F:\Web_App\ShopHouse.Utilities\bin\Debug\netcoreapp3.1\ShopHouse.Utilities.deps.json
+F:\Web_App\ShopHouse.Utilities\bin\Debug\netcoreapp3.1\ShopHouse.Utilities.dll
+F:\Web_App\ShopHouse.Utilities\bin\Debug\netcoreapp3.1\ShopHouse.Utilities.pdb
+F:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+F:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.AssemblyInfoInputs.cache
+F:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.AssemblyInfo.cs
+F:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.csproj.CoreCompileInputs.cache
+F:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.dll
+F:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.pdb

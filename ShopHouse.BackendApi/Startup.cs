@@ -40,7 +40,7 @@ namespace ShopHouse.BackendApi
         public void ConfigureServices(IServiceCollection services)
         {
             
-            services.AddDbContext<ShopHouseDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString(SystemConstants.MainConnectionString)));
+            services.AddDbContext<ShopHouseDbContext>(options => options.UseSqlServer("Server=DESKTOP-QQMOOO4\\SQLEXPRESS;Database=eShopHouseDB;Trusted_Connection=True;"));
             //add identity
             services.AddIdentity<AppUser,AppRole>()
                 .AddEntityFrameworkStores<ShopHouseDbContext>()
