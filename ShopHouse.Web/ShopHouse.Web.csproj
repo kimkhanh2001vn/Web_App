@@ -5,11 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="wwwroot\css\..fonts\Flaticon.eot\index.html" />
-    <Content Include="wwwroot\css\..fonts\Flaticon.ttf\index.html" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="LazZiya.ExpressLocalization" Version="4.0.4" />
     <PackageReference Include="LazZiya.TagHelpers" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
