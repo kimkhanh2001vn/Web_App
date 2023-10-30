@@ -17,3 +17,12 @@ F:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.Assem
 F:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.csproj.CoreCompileInputs.cache
 F:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.dll
 F:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.pdb
+D:\Web_App\ShopHouse.Utilities\bin\Debug\netcoreapp3.1\ShopHouse.Utilities.deps.json
+D:\Web_App\ShopHouse.Utilities\bin\Debug\netcoreapp3.1\ShopHouse.Utilities.dll
+D:\Web_App\ShopHouse.Utilities\bin\Debug\netcoreapp3.1\ShopHouse.Utilities.pdb
+D:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.AssemblyInfoInputs.cache
+D:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.AssemblyInfo.cs
+D:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.csproj.CoreCompileInputs.cache
+D:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.dll
+D:\Web_App\ShopHouse.Utilities\obj\Debug\netcoreapp3.1\ShopHouse.Utilities.pdb

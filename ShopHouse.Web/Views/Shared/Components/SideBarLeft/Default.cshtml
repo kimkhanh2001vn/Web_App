@@ -1,32 +1,3 @@
 ﻿@model List<ShopHouse.ViewModels.Catalog.Categories.CategoryVm>
 @inject LazZiya.ExpressLocalization.ISharedCultureLocalizer _loc;
 @{ var culture = CultureInfo.CurrentCulture.Name; }
-
-
-<div class="col1">
-    <div class="filters">
-        <ul class="button-group tab-flr-btn">
-            @*<li data-filter=".pizza" class="btn-flr is-checked tab-flr-btn-btn-flr-active">
-                    <div class="cat-block">
-                        <div class="block-stl1 bg1">
-                            <span class="flaticon-pizza"></span>
-                            <h4>Pizza</h4>
-                        </div>
-                    </div>
-                </li>*@
-            @foreach (var item in Model)
-            {
-                <li data-filter=".burgers" class="btn-flr">
-                    <a href="/@culture/@_loc["categoryUrl"]/@item.ID">
-                        <div class="cat-block">
-                            <div class="block-stl1 bg-2">
-                                <span class="flaticon-taco"></span>
-                                <h4>@item.Name</h4>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            }
-        </ul>
-    </div>
-</div>

@@ -3,7 +3,7 @@ using ShopHouse.ApiIntegration;
 using System.Globalization;
 using System.Threading.Tasks;
 
-namespace eShopSolution.WebApp.Controllers.Components
+namespace ShopHouse.WebApp.Controllers.Components
 {
     public class SideBarViewComponent : ViewComponent
     {

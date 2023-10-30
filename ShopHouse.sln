@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31702.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopHouse.Web", "ShopHouse.Web\ShopHouse.Web.csproj", "{6DFD9913-EFA4-4CC5-899B-AB6110CABB8C}"
 EndProject
@@ -30,7 +30,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopHouse.Admin", "ShopHous
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopHouse.ApiIntegration", "ShopHouse.ApiIntegration\ShopHouse.ApiIntegration.csproj", "{2FEE8115-E718-4E2D-A72F-6F1167DAE96C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopHouse.UnitTest", "ShopHouse.UnitTest\ShopHouse.UnitTest.csproj", "{B8C68706-C54A-4B74-BDD7-C11065E0DDE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopHouse.UnitTest", "ShopHouse.UnitTest\ShopHouse.UnitTest.csproj", "{B8C68706-C54A-4B74-BDD7-C11065E0DDE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

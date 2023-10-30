@@ -24,3 +24,16 @@ F:\Web_App\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.csp
 F:\Web_App\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.csproj.CopyComplete
 F:\Web_App\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.dll
 F:\Web_App\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.pdb
+D:\Web_App\ShopHouse.ViewModels\bin\Debug\netcoreapp3.1\ShopHouse.ViewModels.deps.json
+D:\Web_App\ShopHouse.ViewModels\bin\Debug\netcoreapp3.1\ShopHouse.ViewModels.dll
+D:\Web_App\ShopHouse.ViewModels\bin\Debug\netcoreapp3.1\ShopHouse.ViewModels.pdb
+D:\Web_App\ShopHouse.ViewModels\bin\Debug\netcoreapp3.1\ShopHouse.Data.dll
+D:\Web_App\ShopHouse.ViewModels\bin\Debug\netcoreapp3.1\ShopHouse.Data.pdb
+D:\Web_App\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.csproj.AssemblyReference.cache
+D:\Web_App\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\Web_App\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.AssemblyInfoInputs.cache
+D:\Web_App\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.AssemblyInfo.cs
+D:\Web_App\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.csproj.CoreCompileInputs.cache
+D:\Web_App\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.csproj.CopyComplete
+D:\Web_App\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.dll
+D:\Web_App\ShopHouse.ViewModels\obj\Debug\netcoreapp3.1\ShopHouse.ViewModels.pdb
