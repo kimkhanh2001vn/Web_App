@@ -926,13 +926,13 @@ F:\Web_App\ShopHouse.Admin\obj\Debug\netcoreapp3.1\ShopHouse.Admin.dll
 F:\Web_App\ShopHouse.Admin\obj\Debug\netcoreapp3.1\ShopHouse.Admin.pdb
 F:\Web_App\ShopHouse.Admin\obj\Debug\netcoreapp3.1\ShopHouse.Admin.genruntimeconfig.cache
 F:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-D:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\libman.json
-D:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\appsettings.Development.json
-D:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\ShopHouse.BackendApi.deps.json
 D:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\ShopHouse.BackendApi.runtimeconfig.json
 D:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\ShopHouse.BackendApi.runtimeconfig.dev.json
+D:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\libman.json
 D:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\ShopHouse.BackendApi.exe
+D:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\ShopHouse.Admin.StaticWebAssets.xml
 D:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\ShopHouse.Admin.exe
 D:\Web_App\ShopHouse.Admin\bin\Debug\netcoreapp3.1\ShopHouse.Admin.deps.json

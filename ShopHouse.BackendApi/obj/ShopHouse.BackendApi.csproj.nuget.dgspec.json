@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj": {}
+    "D:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj": {}
   },
   "projects": {
-    "F:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj": {
+    "D:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj",
+        "projectUniqueName": "D:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj",
         "projectName": "ShopHouse.Application",
-        "projectPath": "F:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj",
+        "projectPath": "D:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "F:\\Web_App\\ShopHouse.Application\\obj\\",
+        "outputPath": "D:\\Web_App\\ShopHouse.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,14 +32,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
-                "projectPath": "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj"
+              "D:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
+                "projectPath": "D:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj"
               },
-              "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
-                "projectPath": "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
+              "D:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
+                "projectPath": "D:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
               },
-              "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
-                "projectPath": "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
+              "D:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
+                "projectPath": "D:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
               }
             }
           }
@@ -96,14 +96,14 @@
         }
       }
     },
-    "F:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj": {
+    "D:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj",
+        "projectUniqueName": "D:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj",
         "projectName": "ShopHouse.BackendApi",
-        "projectPath": "F:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj",
+        "projectPath": "D:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "F:\\Web_App\\ShopHouse.BackendApi\\obj\\",
+        "outputPath": "D:\\Web_App\\ShopHouse.BackendApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -124,17 +124,17 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "F:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj": {
-                "projectPath": "F:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj"
+              "D:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj": {
+                "projectPath": "D:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj"
               },
-              "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
-                "projectPath": "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj"
+              "D:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
+                "projectPath": "D:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj"
               },
-              "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
-                "projectPath": "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
+              "D:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
+                "projectPath": "D:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
               },
-              "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
-                "projectPath": "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
+              "D:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
+                "projectPath": "D:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
               }
             }
           }
@@ -203,14 +203,14 @@
         }
       }
     },
-    "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
+    "D:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj",
+        "projectUniqueName": "D:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj",
         "projectName": "ShopHouse.Data",
-        "projectPath": "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj",
+        "projectPath": "D:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "F:\\Web_App\\ShopHouse.Data\\obj\\",
+        "outputPath": "D:\\Web_App\\ShopHouse.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -305,14 +305,14 @@
         }
       }
     },
-    "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
+    "D:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj",
+        "projectUniqueName": "D:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj",
         "projectName": "ShopHouse.Utilities",
-        "projectPath": "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj",
+        "projectPath": "D:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "F:\\Web_App\\ShopHouse.Utilities\\obj\\",
+        "outputPath": "D:\\Web_App\\ShopHouse.Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -378,14 +378,14 @@
         }
       }
     },
-    "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
+    "D:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj",
+        "projectUniqueName": "D:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj",
         "projectName": "ShopHouse.ViewModels",
-        "projectPath": "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj",
+        "projectPath": "D:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "F:\\Web_App\\ShopHouse.ViewModels\\obj\\",
+        "outputPath": "D:\\Web_App\\ShopHouse.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -406,8 +406,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
-                "projectPath": "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj"
+              "D:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
+                "projectPath": "D:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj"
               }
             }
           }

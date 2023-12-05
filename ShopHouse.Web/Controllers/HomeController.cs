@@ -26,8 +26,8 @@ namespace ShopHouse.Web.Controllers
         private readonly ISlideApiClient _slideApiClient;
         private readonly IProductApiClient _productApiClient;
         private readonly ICategoryApiClient _categoryApiClient;
-        public HomeController(ILogger<HomeController> logger, 
-            ISharedCultureLocalizer loc, 
+        public HomeController(ILogger<HomeController> logger,
+            ISharedCultureLocalizer loc,
             ISlideApiClient slideApiClient,
             IProductApiClient productApiClient,
             ICategoryApiClient categoryApiClient)
@@ -43,12 +43,12 @@ namespace ShopHouse.Web.Controllers
         {
             var culture = CultureInfo.CurrentCulture.Name;
             //var msg = _loc.GetLocalizedString("Vietnamese");
-            //var viewmodel = new HomeViewModel
-            //{
-            //    slides = await _slideApiClient.GetAll(),
-            //    Featureproducts = await _productApiClient.GetfeaturedProducts(culture, SystemConstants.Productsettings.NumberOffFeaturedProduct),
-            //    Popularproducts = await _productApiClient.GetfeaturedProducts(culture, SystemConstants.Productsettings.NumberOffPopularproduct)
-            //};
+            var viewmodel = new HomeViewModel
+            {
+                slides = await _slideApiClient.GetAll(),
+                Featureproducts = await _productApiClient.GetfeaturedProducts(culture, SystemConstants.Productsettings.NumberOffFeaturedProduct),
+                Popularproducts = await _productApiClient.GetfeaturedProducts(culture, SystemConstants.Productsettings.NumberOffPopularproduct)
+            };
             return View();
         }
         public IActionResult Login()

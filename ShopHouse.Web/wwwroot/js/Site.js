@@ -26,7 +26,6 @@
                     languageId: culture
                 },
                 success: function (res) {
-                    $('#lb_Total_Price').text(res.length);
                     console.log(res);
                 },
                 error: function (err) {

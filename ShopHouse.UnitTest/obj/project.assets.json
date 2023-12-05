@@ -11589,11 +11589,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Web_App\\ShopHouse.UnitTest\\ShopHouse.UnitTest.csproj",
+      "projectUniqueName": "D:\\Web_App\\ShopHouse.UnitTest\\ShopHouse.UnitTest.csproj",
       "projectName": "ShopHouse.UnitTest",
-      "projectPath": "F:\\Web_App\\ShopHouse.UnitTest\\ShopHouse.UnitTest.csproj",
+      "projectPath": "D:\\Web_App\\ShopHouse.UnitTest\\ShopHouse.UnitTest.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "F:\\Web_App\\ShopHouse.UnitTest\\obj\\",
+      "outputPath": "D:\\Web_App\\ShopHouse.UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11614,14 +11614,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "F:\\Web_App\\ShopHouse.Admin\\ShopHouse.Admin.csproj": {
-              "projectPath": "F:\\Web_App\\ShopHouse.Admin\\ShopHouse.Admin.csproj"
+            "D:\\Web_App\\ShopHouse.Admin\\ShopHouse.Admin.csproj": {
+              "projectPath": "D:\\Web_App\\ShopHouse.Admin\\ShopHouse.Admin.csproj"
             },
-            "F:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj": {
-              "projectPath": "F:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj"
+            "D:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj": {
+              "projectPath": "D:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj"
             },
-            "F:\\Web_App\\ShopHouse.Web\\ShopHouse.Web.csproj": {
-              "projectPath": "F:\\Web_App\\ShopHouse.Web\\ShopHouse.Web.csproj"
+            "D:\\Web_App\\ShopHouse.Web\\ShopHouse.Web.csproj": {
+              "projectPath": "D:\\Web_App\\ShopHouse.Web\\ShopHouse.Web.csproj"
             }
           }
         }

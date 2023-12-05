@@ -54,12 +54,12 @@ F:\Web_App\ShopHouse.ApiIntegration\obj\Debug\netcoreapp3.1\ShopHouse.ApiIntegra
 F:\Web_App\ShopHouse.ApiIntegration\obj\Debug\netcoreapp3.1\ShopHouse.ApiIntegration.csproj.CopyComplete
 F:\Web_App\ShopHouse.ApiIntegration\obj\Debug\netcoreapp3.1\ShopHouse.ApiIntegration.dll
 F:\Web_App\ShopHouse.ApiIntegration\obj\Debug\netcoreapp3.1\ShopHouse.ApiIntegration.pdb
-D:\Web_App\ShopHouse.ApiIntegration\bin\Debug\netcoreapp3.1\appsettings.Development.json
-D:\Web_App\ShopHouse.ApiIntegration\bin\Debug\netcoreapp3.1\appsettings.json
-D:\Web_App\ShopHouse.ApiIntegration\bin\Debug\netcoreapp3.1\libman.json
 D:\Web_App\ShopHouse.ApiIntegration\bin\Debug\netcoreapp3.1\ShopHouse.BackendApi.deps.json
 D:\Web_App\ShopHouse.ApiIntegration\bin\Debug\netcoreapp3.1\ShopHouse.BackendApi.runtimeconfig.json
 D:\Web_App\ShopHouse.ApiIntegration\bin\Debug\netcoreapp3.1\ShopHouse.BackendApi.runtimeconfig.dev.json
+D:\Web_App\ShopHouse.ApiIntegration\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Web_App\ShopHouse.ApiIntegration\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Web_App\ShopHouse.ApiIntegration\bin\Debug\netcoreapp3.1\libman.json
 D:\Web_App\ShopHouse.ApiIntegration\bin\Debug\netcoreapp3.1\ShopHouse.BackendApi.exe
 D:\Web_App\ShopHouse.ApiIntegration\bin\Debug\netcoreapp3.1\ShopHouse.ApiIntegration.deps.json
 D:\Web_App\ShopHouse.ApiIntegration\bin\Debug\netcoreapp3.1\ShopHouse.ApiIntegration.dll

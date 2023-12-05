@@ -23,7 +23,7 @@ namespace ShopHouse.Web.Controllers
     {
         private readonly IUserApiClient _userApiClient;
         private readonly IConfiguration _configuration;
-        
+
         public AccountController(IUserApiClient userApiClient, IConfiguration configuration)
         {
             _userApiClient = userApiClient;
@@ -70,24 +70,24 @@ namespace ShopHouse.Web.Controllers
             HttpContext.Session.Remove("Token");
             return Redirect($"/{culture}/Home/index");
         }
-        [HttpGet]
-        public IActionResult Register()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public IActionResult Register()
+        //{
+        //    return View();
+        //}
         [HttpPost]
         public async Task<IActionResult> Register(RegisterRequest request)
         {
             var culture = CultureInfo.CurrentCulture.Name;
-            if (!ModelState.IsValid)
-            {
-                return View(request);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return View(ModelState);
+            //}
             var result = await _userApiClient.RegisterUser(request);
             if (!result.IsSuccessed)
             {
                 ModelState.AddModelError("", result.Message);
-                return View();
+                return Redirect($"/{culture}/account/login");
             }
             var loginResult = await _userApiClient.Authenticate(new LoginRequest()
             {
@@ -110,7 +110,6 @@ namespace ShopHouse.Web.Controllers
                             authProperties);
 
             return Redirect($"/{culture}/account/login");
-            return View();
         }
         private ClaimsPrincipal ValidateToken(string jwtToken)
         {

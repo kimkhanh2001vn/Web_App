@@ -6776,11 +6776,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Web_App\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj",
+      "projectUniqueName": "D:\\Web_App\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj",
       "projectName": "ShopHouse.ApiIntegration",
-      "projectPath": "F:\\Web_App\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj",
+      "projectPath": "D:\\Web_App\\ShopHouse.ApiIntegration\\ShopHouse.ApiIntegration.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "F:\\Web_App\\ShopHouse.ApiIntegration\\obj\\",
+      "outputPath": "D:\\Web_App\\ShopHouse.ApiIntegration\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6801,14 +6801,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "F:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj": {
-              "projectPath": "F:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj"
+            "D:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj": {
+              "projectPath": "D:\\Web_App\\ShopHouse.BackendApi\\ShopHouse.BackendApi.csproj"
             },
-            "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
-              "projectPath": "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
+            "D:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
+              "projectPath": "D:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
             },
-            "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
-              "projectPath": "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
+            "D:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
+              "projectPath": "D:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
             }
           }
         }

@@ -6286,11 +6286,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj",
+      "projectUniqueName": "D:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj",
       "projectName": "ShopHouse.Data",
-      "projectPath": "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj",
+      "projectPath": "D:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "F:\\Web_App\\ShopHouse.Data\\obj\\",
+      "outputPath": "D:\\Web_App\\ShopHouse.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

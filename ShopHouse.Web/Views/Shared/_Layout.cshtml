@@ -15,8 +15,7 @@
 
     <!--== Favicon ==-->
     <link rel="shortcut icon" href="~/assets/img/favicon.ico" type="image/x-icon" />
-
-
+    
     <!--== Google Fonts ==-->
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface:400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,900,900i" rel="stylesheet">
@@ -52,13 +51,64 @@
     <!--// loader_wrapper -->
 
     <div id="wrapper">
-        
+
         @RenderSection("Slider", required: false)
         <!-- banner -->
 
         <main>
             @RenderBody()
         </main>
+        <!--== Scroll Top Button ==-->
+        <div class="scroll-to-top"><span class="icofont-arrow-up"></span></div>
+
+        <!--== Start Aside Search Menu ==-->
+        <div class="search-box-wrapper">
+            <div class="search-box-content-inner">
+                <div class="search-box-form-wrap">
+                    <div class="search-note">
+                        <p>Start typing and press Enter to search</p>
+                    </div>
+                    <form action="#" method="post">
+                        <div class="search-form position-relative">
+                            <label for="search-input" class="sr-only">Search</label>
+                            <input type="search" class="form-control" placeholder="Search" id="search-input">
+                            <button class="search-button"><i class="lastudioicon-zoom-1"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--== End Aside Search Menu ==-->
+            <a href="javascript:;" class="search-close"><i class="lastudioicon-e-remove"></i></a>
+        </div>
+        <!--== End Aside Search Menu ==-->
+        @await Component.InvokeAsync("Cartsidebar")
+        <!--== Start Side Menu ==-->
+        <aside class="off-canvas-wrapper">
+            <div class="off-canvas-inner">
+                <div class="off-canvas-overlay d-none"></div>
+                <!-- Start Off Canvas Content Wrapper -->
+                <div class="off-canvas-content">
+                    <!-- Off Canvas Header -->
+                    <div class="off-canvas-header">
+                        <div class="close-action">
+                            <button class="btn-close"><i class="icofont-close-line"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="off-canvas-item">
+                        <!-- Start Mobile Menu Wrapper -->
+                        <div class="res-mobile-menu">
+                            <!-- Note Content Auto Generate By Jquery From Main Menu -->
+                        </div>
+                        <!-- End Mobile Menu Wrapper -->
+                    </div>
+                    <!-- Off Canvas Footer -->
+                    <div class="off-canvas-footer"></div>
+                </div>
+                <!-- End Off Canvas Content Wrapper -->
+            </div>
+        </aside>
+        <!--== End Side Menu ==-->
     </div>
 
     <!--=======================Javascript============================-->
@@ -101,6 +151,8 @@
 
     <!--=== Custom Js ===-->
     <script src="~/assets/js/custom.js"></script>
+
+    <script src="~/js/site.js"></script>
     @RenderSection("Scripts", required: false)
 
 </body>

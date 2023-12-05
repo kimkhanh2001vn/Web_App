@@ -2,112 +2,399 @@
 @{
     ViewData["Title"] = "Category";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var culture = CultureInfo.CurrentCulture.Name; 
+    var culture = CultureInfo.CurrentCulture.Name;
 }
 @inject LazZiya.ExpressLocalization.ISharedCultureLocalizer _loc;
-<section class="page-info new-block">
-    <div class="fixed-bg" style="background: url('images/info-bg.jpg');"></div>
-    <div class="overlay"></div>
-    <div class="container">
-        <h2>Domnoo menu</h2>
-        <div class="clear-fix"></div>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active"><a href="#">Library</a></li>
-        </ol>
+@section Scripts{
+    <script>
+        var siteController = new SiteController();
+        siteController.initialize();
+    </script>
+}
+<!--wrapper start-->
+<div class="wrapper page-Shop-wrapper">
+
+    <!--== Start Preloader Content ==-->
+    <div class="preloader-wrap">
+        <div class="preloader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
-</section><!-- banner -->
+    <!--== End Preloader Content ==-->
+    <!--== Start Header Wrapper ==-->
+    @await Component.InvokeAsync("SideBar")
+    <!--== End Header Wrapper ==-->
 
-
-<section class="domnoo-menu-filter2 list-grid-sec new-block">
-    <div class="fixed-bg parallax" style="background-image: url(/images/ptrn1.jpg);"></div>
-    <div class="overlay"></div>
-    @await Component.InvokeAsync("SideBarLeft")
-
-    <div class="col2">
-        <div class="grid" id="grid">
-            @for (int i = 0; i < Model.Products.Items.Count; i++)
-            {
-                var item = Model.Products.Items[i];
-                var url = $"/{culture}/{_loc["productUrl"]}/{item.Id}";
-                <div class="items-for-flr pizza" data-newest="1" data-popularity="5" data-price="6.00">
-                    <div class="block-stl2">
-                        <div class="img-holder">
-                            <img src="images/img3.png" alt="@item.Name" class="img-responsive">
+    <main class="main-content">
+        <!--== Start Page Title Area ==-->
+        <section class="page-title-area bg-overlay-black2-6 bg-img" data-bg-img="assets/img/photos/bg-page1.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="page-title-content">
+                            <h2 class="title">Shop</h2>
+                            <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">></span></a><span class="active">Shop</span></div>
                         </div>
-                        <div class="text-block">
-                            <h3>@item.Name</h3>
-                            <p class="sz">Size : Regular</p>
-                            <p class="price"><span>@Html.FormatValue(item.Price, "{0:#,##0.00}")</span></p>
-                        </div>
-                        <div class="btn-sec">
-                            <a href="@url" class="btn4" localize-content>About More</a>
-                            <a href="#" class="btn4 btn-add-cart btn-add-cart" data-id="@item.Id" localize-content>Add to Cart</a>
-                        </div>
-                        <span class="nonveg veg-nonveg"></span>
                     </div>
-
-                    <div class="block-stl2_dsn2 md2">
-                        <div class="img-holder">
-                            <img src="images/img3.png" alt="" class="img-responsive">
-                        </div>
-                        <div class="text-block">
-                            <h3>@item.Name</h3>
-                            <p class="sz">Size : Regular</p>
-                            <p class="price"><span>@Html.FormatValue(item.OriginalPrice, "{0:#,##0.00}")</span> <del>@Html.FormatValue(item.Price, "{0:#,##0.00}")</del></p>
-                            <div class="btn-sec">
-                                <a href="@url" class="btn4" localize-content>About More</a>
-                                <a href="#" class="btn4" localize-content>Add to Cart</a>
+                </div>
+            </div>
+        </section>
+        <!--== End Page Title Area ==-->
+        <!--== Start Product Area Wrapper ==-->
+        <section class="product-area product-shop-inner-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 order-1 order-lg-0">
+                        <div class="sidebar-area inner-right-padding shop-sidebar-area">
+                            <div class="widget">
+                                <div class="widget-search-box">
+                                    <form action="#" method="post">
+                                        <div class="form-input-item">
+                                            <label for="search2" class="sr-only">Search Here</label>
+                                            <input type="text" id="search2" placeholder="Search entire store…">
+                                            <button type="submit" class="btn-src">
+                                                <i class="icofont-search-1"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h3 class="widget-title">Categories</h3>
+                                <div class="widget-custom-menu">
+                                    <ul>
+                                        <li class="has-sub">
+                                            <a class="collapsed" data-bs-toggle="collapse" href="#has-sub1" role="button" aria-expanded="false" aria-controls="has-sub1">Men</a>
+                                            <ul class="collapse" id="has-sub1" style="">
+                                                <li><a href="shop.html">New in</a></li>
+                                                <li><a href="shop.html">Clothing</a></li>
+                                                <li><a href="shop.html">Coats</a></li>
+                                                <li><a href="shop.html">Jackets</a></li>
+                                                <li><a href="shop.html">Shirts</a></li>
+                                                <li><a href="shop.html">T-shirts</a></li>
+                                                <li><a href="shop.html">Blazers</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-sub">
+                                            <a class="collapsed active" data-bs-toggle="collapse" href="#has-sub2" role="button" aria-expanded="false" aria-controls="has-sub2">Women</a>
+                                            <ul class="collapse" id="has-sub2">
+                                                <li><a href="shop.html">New In</a></li>
+                                                <li><a href="shop.html">Jeans</a></li>
+                                                <li><a href="shop.html">Jackets</a></li>
+                                                <li><a href="shop.html">Sweatshirts</a></li>
+                                                <li><a href="shop.html">Skirts</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-sub">
+                                            <a class="collapsed" data-bs-toggle="collapse" href="#has-sub3" role="button" aria-expanded="false" aria-controls="has-sub3">Kids</a>
+                                            <ul class="collapse" id="has-sub3">
+                                                <li><a href="shop.html">Shoes</a></li>
+                                                <li><a href="shop.html">Clothing</a></li>
+                                                <li><a href="shop.html">Shirts</a></li>
+                                                <li><a href="shop.html">Skirts</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-sub">
+                                            <a class="collapsed" data-bs-toggle="collapse" href="#has-sub4" role="button" aria-expanded="false" aria-controls="has-sub4">Accessories</a>
+                                            <ul class="collapse" id="has-sub4">
+                                                <li><a href="shop.html">Bags</a></li>
+                                                <li><a href="shop.html">Shoes</a></li>
+                                                <li><a href="shop.html">Wallets</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h4 class="widget-title">By price</h4>
+                                <div class="widget-price-filter">
+                                    <div class="slider-range" id="slider-range"></div>
+                                    <div class="slider-labels">
+                                        <span class="range-price-title">Price:</span>
+                                        <div class="caption">
+                                            <span id="slider-range-value1"></span>
+                                        </div>
+                                        <span class="range-separator"> — </span>
+                                        <div class="caption">
+                                            <span id="slider-range-value2"></span>
+                                        </div>
+                                    </div>
+                                    <a class="btn-filter" href="shop.html">Filter</a>
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h4 class="widget-title">By Color</h4>
+                                <div class="widget-color-menu">
+                                    <ul>
+                                        <li class="blue"></li>
+                                        <li class="brown"></li>
+                                        <li class="red"></li>
+                                        <li class="violet"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h4 class="widget-title">By Size</h4>
+                                <div class="widget-size-menu">
+                                    <ul>
+                                        <li><a href="#/">Blue</a>(9)</li>
+                                        <li><a href="#/">Brown</a>(10)</li>
+                                        <li><a href="#/">Red</a>(1)</li>
+                                        <li><a href="#/">Violet</a>(10)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h4 class="widget-title">By brands</h4>
+                                <div class="widget-size-menu">
+                                    <ul>
+                                        <li><a href="#/">Blue</a>(9)</li>
+                                        <li><a href="#/">Brown</a>(10)</li>
+                                        <li><a href="#/">Red</a>(1)</li>
+                                        <li><a href="#/">Violet</a>(10)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <div class="widget-banner">
+                                    <a href="blog.html"><img src="~/assets/img/photos/banner1.jpg" alt="Image"></a>
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h3 class="widget-title">Instagram</h3>
+                                <div class="widget-gallery">
+                                    <div class="row row-cols-3 row-gutter-4">
+                                        <div class="col">
+                                            <div class="gallery-item">
+                                                <img src="~/assets/img/photos/gallery1.jpg" alt="Givest-HasTech">
+                                                <a class="icon" href="#/"><i class="icofont-instagram"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="gallery-item">
+                                                <img src="~/assets/img/photos/gallery2.jpg" alt="Givest-HasTech">
+                                                <a class="icon" href="#/"><i class="icofont-instagram"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="gallery-item">
+                                                <img src="~/assets/img/photos/gallery3.jpg" alt="Givest-HasTech">
+                                                <a class="icon" href="#/"><i class="icofont-instagram"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="gallery-item">
+                                                <img src="~/assets/img/photos/gallery4.jpg" alt="Givest-HasTech">
+                                                <a class="icon" href="#/"><i class="icofont-instagram"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="gallery-item">
+                                                <img src="~/assets/img/photos/gallery5.jpg" alt="Givest-HasTech">
+                                                <a class="icon" href="#/"><i class="icofont-instagram"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="gallery-item">
+                                                <img src="~/assets/img/photos/gallery6.jpg" alt="Givest-HasTech">
+                                                <a class="icon" href="#/"><i class="icofont-instagram"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <span class="nonveg veg-nonveg"></span>
+                    </div>
+                    <div class="col-lg-9 order-0 order-lg-1">
+                        <div class="inner-left-padding">
+                            <div class="shop-toolbar-wrap">
+                                <div class="shop-toolbar-left">
+                                    <div class="product-showing-status">
+                                        <p class="count-result">Showing 1–12 of 88 results</p>
+                                    </div>
+                                </div>
+                                <div class="shop-toolbar-right">
+                                    <div class="product-sorting-menu product-view-count">
+                                        <span class="current">Show 12 <i class="lastudioicon-down-arrow"></i></span>
+                                        <ul>
+                                            <li class="active"><a href="shop.html" class="active">Show 12</a></li>
+                                            <li><a href="shop.html">Show 15</a></li>
+                                            <li><a href="shop.html">Show 30</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-sorting-menu product-view-count">
+                                        <span class="current">Filters <i class="lastudioicon-down-arrow"></i></span>
+                                        <ul>
+                                            <li class="active"><a href="shop.html" class="active">Filters</a></li>
+                                            <li><a href="shop.html">Categories</a></li>
+                                            <li><a href="shop.html">Tags</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-sorting-menu product-sorting">
+                                        <span class="current">Sort by Default <i class="lastudioicon-down-arrow"></i></span>
+                                        <ul>
+                                            <li class="active"><a href="shop.html" class="active">Sort by Default</a></li>
+                                            <li><a href="shop.html">Sort by Popularity</a></li>
+                                            <li><a href="shop.html">Sort by Rated</a></li>
+                                            <li><a href="shop.html">Sort by Latest</a></li>
+                                            <li><a href="shop.html">Sort by Price: <i class="lastudioicon-arrow-up"></i></a></li>
+                                            <li><a href="shop.html">Sort by Price: <i class="lastudioicon-arrow-down"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-view-mode">
+                                        <nav>
+                                            <div class="nav nav-tabs active" id="nav-tab" role="tablist">
+                                                <button class="nav-link" id="nav-list-tab" data-bs-toggle="tab" data-bs-target="#nav-list" type="button" role="tab" aria-controls="nav-list" aria-selected="false"><i class="lastudioicon-list-bullet-2"></i></button>
+                                                <button class="nav-link" id="nav-grid-tab" data-bs-toggle="tab" data-bs-target="#nav-grid" type="button" role="tab" aria-controls="nav-grid" aria-selected="true"><i class="lastudioicon-microsoft"></i></button>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-grid" role="tabpanel" aria-labelledby="nav-grid-tab">
+                                    <div class="row row-gutter-60 product-items-style4">
+                                        @for (int i = 0; i < Model.Products.Items.Count; i++)
+                                        {
+                                            var item = Model.Products.Items[i];
+                                            var url = $"/{culture}/{_loc["productUrl"]}/{item.Id}";
+                                            <div class="col-sm-6 col-md-4">
+                                                <!-- Start Product Item -->
+                                                <div class="product-item">
+                                                    <div class="product-thumb">
+                                                        <a href="shop-single-product.html">
+                                                            <img src="~/assets/img/shop/13.jpg" alt="@item.Name">
+                                                            <span class="thumb-overlay"></span>
+                                                        </a>
+                                                        <div class="product-action action-style3">
+                                                            <a class="btn-add-cart action-cart ht-tooltip" href="#" data-id="@item.Id" data-tippy-content="Add to cart" title="Add to cart">
+                                                                <i class="lastudioicon-shopping-cart-3"></i>
+                                                            </a>
+                                                            @* <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
+                                                        <i class="lastudioicon-search-zoom-in"></i>
+                                                        </a> *@
+                                                            <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="#" title="Add to wishlist">
+                                                                <i class="lastudioicon-heart-2"></i>
+                                                            </a>
+                                                            <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="#" title="Add to compare">
+                                                                <i class="lastudioicon-compare"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-info info-style2">
+                                                        <div class="content-inner">
+                                                            <h4 class="title"><a href="@url">@item.Name</a></h4>
+                                                            <div class="prices">
+                                                                <span class="price">@Html.FormatValue(item.OriginalPrice, "{0:#,##0.00}")</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Product Item -->
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            @await Component.InvokeAsync("Pager", Model.Products)
+                        </div>
                     </div>
                 </div>
-            }
-        </div>
-    </div>
-
-
-    <div class="clearfix"></div>
-    @*<div class="container text-center">
-            <div class="pegination-block">
-                <ul class="pagination">
-                    <li><a href="#"><i class="flaticon-left-arrow"></i></a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#"><i class="flaticon-right-arrow"></i></a></li>
-                </ul>
             </div>
-        </div>*@
-    @await Component.InvokeAsync("Pager", Model.Products)
-</section>
-<!-- .domnoo-menu-filter -->
+        </section>
+        <!--== End Product Area Wrapper ==-->
+    </main>
 
-
-<section class="amezing-offers new-block">
-    <div class="overlay"></div>
-    <div class="fixed-bg parallax" style="background: url('/images/bg1.png');"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="img-holder">
-                    <img src="images/pz1.png" alt="" class="img-responsive">
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="text-block-stl1">
-                    <div class="title">
-                        <p class="top-h">amazing offers online</p>
-                        <h2>50% off pizzas online</h2>
-                        <p class="bottom-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ornare placerat tellus sit amet ullamcorper.</p>
-                        <a href="#" class="btn1 stl2" localize-content>buy now</a>
-                        <a href="#" class="btn1 stl1" localize-content>about more</a>
+    <!--== Start Footer Area Wrapper ==-->
+    @await Component.InvokeAsync("Footer")
+    <!--== End Footer Area Wrapper ==-->
+    <!--== Start Product Quick View ==-->
+    <aside class="product-quick-view-modal">
+        <div class="product-quick-view-inner">
+            <div class="product-quick-view-content">
+                <button type="button" class="btn-close">
+                    <span class="close-icon"><i class="lastudioicon-e-remove"></i></span>
+                </button>
+                <div class="row row-gutter-0">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="thumb">
+                            <img src="~/assets/img/shop/quick-view1.jpg" alt="Moren-Shop">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="single-product-info">
+                            <h4 class="title">Product Simple</h4>
+                            <div class="product-rating">
+                                <div class="review">
+                                    <p><span></span>99 in stock</p>
+                                </div>
+                            </div>
+                            <div class="prices">
+                                <span class="price">£49.90</span>
+                            </div>
+                            <p class="product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla quis ipsum enim viverra. Enim in morbi tincidunt ante luctus tincidunt integer. Sed adipiscing vehicula.</p>
+                            <div class="quick-product-action">
+                                <div class="action-top">
+                                    <div class="pro-qty-area">
+                                        <div class="pro-qty">
+                                            <input type="text" id="quantity" title="Quantity" value="1">
+                                            <a href="#" class="inc qty-btn">+</a><a href="#" class="dec qty-btn">-</a>
+                                        </div>
+                                    </div>
+                                    <a class="btn-theme btn-black" href="shop-cart.html">Add to cart</a>
+                                </div>
+                                <div class="action-bottom">
+                                    <a class="btn-wishlist" href="shop-wishlist.html"><i class="labtn-icon labtn-icon-wishlist"></i>Add to wishlist</a>
+                                    <a class="btn-compare" href="shop-compare.html"><i class="labtn-icon labtn-icon-compare"></i>Add to compare</a>
+                                </div>
+                            </div>
+                            <div class="product-ratting">
+                                <div class="product-sku">
+                                    SKU: <span>REF. LA-276</span>
+                                </div>
+                            </div>
+                            <div class="product-categorys">
+                                <div class="product-category">
+                                    Category: <span>Uncategorized</span>
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h3 class="title">Tags:</h3>
+                                <div class="widget-tags">
+                                    <ul>
+                                        <li><a href="shop.html">Blazer,</a></li>
+                                        <li><a href="shop.html">Fashion,</a></li>
+                                        <li><a href="shop.html">wordpress,</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-social-info">
+                                <a href="#"><span class="lastudioicon-b-facebook"></span></a>
+                                <a href="#"><span class="lastudioicon-b-twitter"></span></a>
+                                <a href="#"><span class="lastudioicon-b-linkedin"></span></a>
+                                <a href="#"><span class="lastudioicon-b-pinterest"></span></a>
+                            </div>
+                            <div class="product-nextprev">
+                                <a href="shop-single-product.html">
+                                    <i class="lastudioicon-arrow-left"></i>
+                                </a>
+                                <a href="shop-single-product.html">
+                                    <i class="lastudioicon-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+        <div class="canvas-overlay"></div>
+    </aside>
+    <!--== End Product Quick View ==-->
+</div>
+
+

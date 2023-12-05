@@ -39,14 +39,14 @@ namespace ShopHouse.BackendApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
-            services.AddDbContext<ShopHouseDbContext>(options => options.UseSqlServer("Server=DESKTOP-VIKA3AS\\SQLEXPRESS02;Database=eShopHouseDB;Trusted_Connection=True;"));
+
+            services.AddDbContext<ShopHouseDbContext>(options => options.UseSqlServer("Server=DESKTOP-QQMOOO4\\SQLEXPRESS;Database=eShopHouseDB;Trusted_Connection=True;"));
             //add identity
-            services.AddIdentity<AppUser,AppRole>()
+            services.AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<ShopHouseDbContext>()
                 .AddDefaultTokenProviders();
             //add DI
-            
+
             services.AddTransient<IStorageService, FileStorageService>();
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IUserService, UserService>();
@@ -64,7 +64,7 @@ namespace ShopHouse.BackendApi
             //services.AddTransient<IValidator<LoginRequest>, LoginRequestValidator>();
             //services.AddTransient<IValidator<RegisterRequest>, RegisterRequestValidator>();
 
-            
+
 
             services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginRequestValidator>());
             services.AddSwaggerGen(c =>

@@ -1,0 +1,59 @@
+﻿@using ShopHouse.Utilities.Constants
+@{
+    var culture = CultureInfo.CurrentCulture.Name;
+    var list_item = ViewBag.ListCatSidebar;
+}
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration;
+@section Scripts{
+    <script src="~/js/Cart.js" defer></script>
+    <script defer>
+        var cartController = new CartController();
+        cartController.initialize();
+    </script>
+}
+<!--== Start Sidebar Cart Menu ==-->
+<aside class="sidebar-cart-modal">
+    <div class="sidebar-cart-inner">
+        <div class="sidebar-cart-content">
+            <a class="cart-close" href="javascript:void(0);"><i class="lastudioicon-e-remove"></i></a>
+            <div class="sidebar-cart">
+                <h4 class="sidebar-cart-title">Shopping Cart</h4>
+                <div class="product-cart">
+                    @foreach (var item in list_item)
+                    {
+                        <div class="product-cart-item">
+                            <div class="product-img">
+                                <a href="shop.html"><img src="@(Configuration[SystemConstants.Appsettings.BaseAddress] + item.Images)" alt=""></a>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="title"><a href="shop.html">@item.Name</a></h4>
+                                <span class="info">@item.Quantity × @item.Price</span>
+                            </div>
+                            <div class="product-delete"><a href="#/">×</a></div>
+                        </div>
+                    }
+                </div>
+                <div class="cart-total">
+                    <h4>Subtotal: <span id="lb_total" class="money"></span></h4>
+                </div>
+                <div class="shipping-info">
+                    <div class="loading-bar">
+                        <div class="load-percent"></div>
+                        <div class="label-free-shipping">
+                            <div class="free-shipping svg-icon-style">
+                                <span class="svg-icon" id="svg-icon-shipping" data-svg-icon="assets/img/icons/shop1.svg"></span>
+                            </div>
+                            <p>Spend £101.10 to get Free Shipping</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-checkout-btn">
+                    <a class="btn-theme" href="/@culture/Cart/Index">View cart</a>
+                    <a class="btn-theme" href="shop-checkout.html">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+<div class="sidebar-cart-overlay"></div>
+<!--== End Sidebar Cart Menu ==-->

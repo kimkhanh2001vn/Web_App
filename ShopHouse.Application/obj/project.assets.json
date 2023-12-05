@@ -6414,11 +6414,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj",
+      "projectUniqueName": "D:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj",
       "projectName": "ShopHouse.Application",
-      "projectPath": "F:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj",
+      "projectPath": "D:\\Web_App\\ShopHouse.Application\\ShopHouse.Application.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "F:\\Web_App\\ShopHouse.Application\\obj\\",
+      "outputPath": "D:\\Web_App\\ShopHouse.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6439,14 +6439,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
-              "projectPath": "F:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj"
+            "D:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj": {
+              "projectPath": "D:\\Web_App\\ShopHouse.Data\\ShopHouse.Data.csproj"
             },
-            "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
-              "projectPath": "F:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
+            "D:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj": {
+              "projectPath": "D:\\Web_App\\ShopHouse.Utilities\\ShopHouse.Utilities.csproj"
             },
-            "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
-              "projectPath": "F:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
+            "D:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj": {
+              "projectPath": "D:\\Web_App\\ShopHouse.ViewModels\\ShopHouse.ViewModels.csproj"
             }
           }
         }
