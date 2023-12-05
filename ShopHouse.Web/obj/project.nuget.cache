@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RBRklcg4xhNA9j9ns4mwFJUVRm4WKpCCTjOITseW19rWAZ75YHPxeeS7mAm32RD2z3OVKdQ/ddPF3W74jMLbiA==",
+  "dgSpecHash": "fDwDOthuhBgxLVR7dvBbyoeZA+lue/NfJVvHxfiDXliUhU1R2cZ34Ku9zOb/Tjnq/piUm3TOShE4SKaDAjMUJA==",
   "success": true,
   "projectFilePath": "D:\\Web_App\\ShopHouse.Web\\ShopHouse.Web.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,9 @@
     "C:\\Users\\User\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.5\\fluentvalidation.dependencyinjectionextensions.10.3.5.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\lazziya.expresslocalization\\4.0.4\\lazziya.expresslocalization.4.0.4.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\lazziya.taghelpers\\6.0.0\\lazziya.taghelpers.6.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnet.mvc\\5.3.0\\microsoft.aspnet.mvc.5.3.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnet.razor\\3.3.0\\microsoft.aspnet.razor.3.3.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnet.webpages\\3.3.0\\microsoft.aspnet.webpages.3.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.21\\microsoft.aspnetcore.authentication.jwtbearer.3.1.21.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.21\\microsoft.aspnetcore.cryptography.internal.3.1.21.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.21\\microsoft.aspnetcore.cryptography.keyderivation.3.1.21.nupkg.sha512",
@@ -82,6 +85,7 @@
     "C:\\Users\\User\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.templating\\3.1.5\\microsoft.visualstudio.web.codegeneration.templating.3.1.5.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\3.1.5\\microsoft.visualstudio.web.codegeneration.utils.3.1.5.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\3.1.5\\microsoft.visualstudio.web.codegenerators.mvc.3.1.5.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
@@ -205,5 +209,46 @@
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Mvc 5.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Razor 3.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebPages 3.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

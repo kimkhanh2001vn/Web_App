@@ -125,26 +125,7 @@ namespace ShopHouse.Web.Controllers
 
                 HttpContext.Session.SetString(SystemConstants.CartSession, JsonConvert.SerializeObject(list));
             }
-
-            //int quantity = 1;
-            //if (currentCart.Any(x => x.ProductId == id))
-            //{
-            //    quantity = currentCart.First(x => x.ProductId == id).Quantity + 1;
-            //}
-
-            //var cartItem = new CartItemViewModel()
-            //{
-            //    ProductId = id,
-            //    Description = product.Description,
-            //    Images = product.ThumbnailImage,
-            //    Name = product.Name,
-            //    Quantity = quantity,
-            //    Price = product.Price
-            //};
-
-            //currentCart.Add(cartItem);
-            //HttpContext.Session.SetString(SystemConstants.CartSession, JsonConvert.SerializeObject(currentCart));
-            return View();
+            return Json(new { status = "true" });
         }
         public IActionResult UpdateCart(int id, int quantity)
         {

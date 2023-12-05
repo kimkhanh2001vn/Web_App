@@ -21,7 +21,7 @@ namespace ShopHouse.Web.Controllers.Components
                 currentCart = JsonConvert.DeserializeObject<List<CartItemViewModel>>(session);
             }
 
-            ViewBag.ListCatSidebar = currentCart.Sum(x => x.Quantity);
+            ViewBag.ListCatSidebar = currentCart;
 
             return Task.FromResult((IViewComponentResult)View("Default", result));
         }

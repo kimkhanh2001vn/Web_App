@@ -26,6 +26,7 @@
                     languageId: culture
                 },
                 success: function (res) {
+                    window.location.reload(true);
                     console.log(res);
                 },
                 error: function (err) {

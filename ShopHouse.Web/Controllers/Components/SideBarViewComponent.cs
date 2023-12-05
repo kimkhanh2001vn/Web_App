@@ -6,6 +6,7 @@ using ShopHouse.Utilities.Constants;
 using ShopHouse.Web.Models;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ShopHouse.WebApp.Controllers.Components
@@ -29,7 +30,7 @@ namespace ShopHouse.WebApp.Controllers.Components
                 currentCart = JsonConvert.DeserializeObject<List<CartItemViewModel>>(session);
             }
 
-            ViewBag.NumberCar = currentCart.Count > 0 ? currentCart.Count : 0;
+            ViewBag.NumberCar = currentCart.Count > 0 ? currentCart.Sum(x => x.Quantity) : 0;
             return View(items);
         }
     }

@@ -622,6 +622,10 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
             "Microsoft.AspNetCore.Session": {
               "target": "Package",
               "version": "[2.2.0, )"
