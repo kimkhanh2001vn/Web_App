@@ -220,3 +220,10 @@ D:\Web_App\ShopHouse.Web\obj\Debug\netcoreapp3.1\ShopHouse.Web.csproj.CopyComple
 D:\Web_App\ShopHouse.Web\obj\Debug\netcoreapp3.1\ShopHouse.Web.dll
 D:\Web_App\ShopHouse.Web\obj\Debug\netcoreapp3.1\ShopHouse.Web.pdb
 D:\Web_App\ShopHouse.Web\obj\Debug\netcoreapp3.1\ShopHouse.Web.genruntimeconfig.cache
+D:\Web_App\ShopHouse.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
+D:\Web_App\ShopHouse.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contact.cshtml.g.cs
+D:\Web_App\ShopHouse.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\FAQs.cshtml.g.cs
+D:\Web_App\ShopHouse.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\ComingSoon.cshtml.g.cs
+D:\Web_App\ShopHouse.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Collections.cshtml.g.cs
+D:\Web_App\ShopHouse.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Blog.cshtml.g.cs
+D:\Web_App\ShopHouse.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cart\CheckOut.cshtml.g.cs

@@ -1,4 +1,4 @@
-﻿@model List<ShopHouse.ViewModels.Catalog.Categories.CategoryVm>
+﻿@model SideBarViewModel
 @inject LazZiya.ExpressLocalization.ISharedCultureLocalizer _loc;
 @{ var culture = CultureInfo.CurrentCulture.Name; }
 
@@ -32,45 +32,36 @@
 
                             <ul class="main-menu nav justify-content-center position-relative">
                                 <li class="has-submenu active">
-                                    <a href="/@culture/Home/Index">Home</a>
+                                    <a href="/@culture/Home/Index">Trang Chủ</a>
                                     <ul class="submenu-nav">
-                                        <li><a href="index.html">About Us</a></li>
-                                        <li><a href="index-2.html">Contact</a></li>
-                                        <li><a href="index-3.html">Primary Security</a></li>
+                                        <li><a href="/@culture/Home/About">Giới Thiệu</a></li>
+                                        <li><a href="/@culture/Home/Contact">Liên Hệ</a></li>
+                                        <li><a href="index-3.html">Bảo mật chính</a></li>
                                     </ul>
                                 </li>
                                 
                                 <li class="has-submenu">
-                                    <a href="/@culture/Product/Category">Shop</a>
+                                    <a href="#">Mua Sắm</a>
                                     <ul class="submenu-nav">
-                                        <li><a href="shop.html">Shop Office Dress</a></li>
-                                        <li><a href="shop-fullwidth.html">Shop Shirt</a></li>
-                                        <li><a href="shop-fullwidth2.html">Shop Jacket</a></li>
-                                        <li><a href="shop-fullwidth3.html">Shop Troussers</a></li>
-                                        <li><a href="shop-fullwidth3.html">Shop Bored Skirt</a></li>
+                                        @foreach(var item in Model.Categories)
+                                        {
+                                            <li><a href="/@culture/Product/Category/@item.ID">@item.Name</a></li>
+                                        }
                                     </ul>
                                 </li>
                                 <li class="has-submenu">
-                                    <a href="blog.html">Pages</a>
+                                    <a href="blog.html">Trang</a>
                                     <ul class="submenu-nav">
-                                        <li><a href="about.html">List Product</a></li>
-                                        <li><a href="coming-soon.html">Coming Soon</a></li>
-                                        <li><a href="faq.html">FAQs</a></li>
+                                        <li><a href="/@culture/Product/Category">Danh Sách Sản Phầm</a></li>
+                                        <li><a href="/@culture/Home/ComingSoon">Sắp ra mắt</a></li>
+                                        <li><a href="/@culture/Home/FAQs">FAQs</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="shop-collections.html">New Collections</a></li>
+                                <li><a href="/@culture/Home/Collections">Bộ sưu tập mới</a></li>
                                 <li>
-                                    <a href="blog.html">Blog</a>
-                                    @* <ul class="submenu-nav">
-                                        <li><a href="blog.html">Blog Grid Left Sidebar</a></li>
-                                        <li><a href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
-                                        <li><a href="blog-grid-no-sidebar.html">Blog Grid No Sidebar</a></li>
-                                        <li><a href="blog-details-left-sidebar.html">Blog Single Left Sidebar</a></li>
-                                        <li><a href="blog-details-right-sidebar.html">Blog Single Right Sidebar</a></li>
-                                        <li><a href="blog-details-no-sidebar.html">Blog Single No Sidebar</a></li>
-                                    </ul> *@
+                                    <a href="/@culture/Home/Blog">Blog</a>
                                 </li>
-                                <li><a href="contact.html">Lookbook</a></li>
+                                <li><a href="#">Lookbook</a></li>
                             </ul>
                         </div>
                     </div>
@@ -78,10 +69,10 @@
                         <div class="header-action-area">
                             <div class="header-action-search-form">
                                 <div class="search-form">
-                                    <form action="#" method="post">
+                                    <form action="/@culture/product/Category" method="post">
                                         <div class="form-input-item">
-                                            <label for="action-search" class="sr-only">Search</label>
-                                            <input type="text" id="action-search" placeholder="Search">
+                                            <label for="action-search" class="sr-only">Tìm Kiếm</label>
+                                            <input type="text" name="keyword" value="@ViewBag.keyword" placeholder="tìm kiếm...">
                                         </div>
                                     </form>
                                 </div>
@@ -94,7 +85,7 @@
                             <div class="header-action-cart">
                                 <button class="btn-cart cart-icon">
                                     <span class="cart-count">
-                                       @ViewBag.NumberCar
+                                       @ViewBag.NumberCart
                                     </span>
                                     <i class="lastudioicon-shopping-cart-2"></i>
                                 </button>

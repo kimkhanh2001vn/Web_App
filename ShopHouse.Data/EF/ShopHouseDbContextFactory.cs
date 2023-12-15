@@ -17,8 +17,8 @@ namespace ShopHouse.Data.EF
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            var connectionString = "DESKTOP-QQMOOO4\\SQLEXPRESS;Database=eShopHouseDB;Trusted_Connection=True;";
-            //configuration.GetConnectionString("defaultString");
+            //var connectionString = "Server=DESKTOP-QQMOOO4\\SQLEXPRESS;Database=eShopHouseDB;Trusted_Connection=True;";
+            var connectionString = configuration.GetConnectionString("defaultString");
 
             var optionsBuilder = new DbContextOptionsBuilder<ShopHouseDbContext>();
             optionsBuilder.UseSqlServer(connectionString);

@@ -124,11 +124,11 @@ namespace ShopHouse.ApiIntegration
             return JsonConvert.DeserializeObject<ApiErrorResult<bool>>(result);
         }
 
-        public async Task<ApiResult<bool>> UpdateUser(Guid id,UserUpdateRequest request)
+        public async Task<ApiResult<bool>> UpdateUser(Guid id, UserUpdateRequest request)
         {
             var session = _httpContextAccessor.HttpContext.Session.GetString("Token");
             var json = JsonConvert.SerializeObject(request);
-           
+
             var httpContent = new StringContent(json, Encoding.UTF8, "application/json");
 
             var client = _httpClientFactory.CreateClient();

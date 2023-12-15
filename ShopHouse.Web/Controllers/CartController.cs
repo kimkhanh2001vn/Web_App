@@ -5,10 +5,12 @@ using Newtonsoft.Json;
 using ShopHouse.ApiIntegration;
 using ShopHouse.Data.Entities;
 using ShopHouse.Utilities.Constants;
+using ShopHouse.ViewModels.Common;
 using ShopHouse.ViewModels.Sales;
 using ShopHouse.Web.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,6 +18,7 @@ namespace ShopHouse.Web.Controllers
 {
     public class CartController : Controller
     {
+        #region Call Service
         private readonly IProductApiClient _productApiClient;
         private readonly IOrderApiClient _orderApiClient;
         public CartController(IProductApiClient productApiClient, IOrderApiClient orderApiClient)
@@ -25,42 +28,20 @@ namespace ShopHouse.Web.Controllers
         }
         public IActionResult Index()
         {
+            var session = HttpContext.Session.GetString(SystemConstants.CartSession);
+            List<CartItemViewModel> currentCart = new List<CartItemViewModel>();
+            if (session != null)
+            {
+                currentCart = JsonConvert.DeserializeObject<List<CartItemViewModel>>(session);
+            }
+
+            ViewBag.TotalCart = currentCart.Sum(x => x.Price * x.Quantity).ToString();
             return View();
         }
-        [HttpGet]
-        //public IActionResult CheckOut()
-        //{
-        //    return View(GetCheckOutViewMode());
-        //}
-        //[HttpPost]
-        //public async Task<IActionResult> CheckOut(CheckOutViewModel request)
-        //{
-        //    var model = GetCheckOutViewMode();
-        //    var orderDetail = new List<OrderDetailVm>();
-        //    foreach (var item in model.cartItems)
-        //    {
-        //        orderDetail.Add(new OrderDetailVm()
-        //        {
-        //            ProductId = item.ProductId,
-        //            Quantity = item.Quantity
-        //        });
-        //    }
-        //    var checkoutRequest = new CheckOutRequest()
-        //    {
-        //        Address = request.checkOut.Address,
-        //        Email = request.checkOut.Email,
-        //        Name = request.checkOut.Name,
-        //        PhoneNumber = request.checkOut.PhoneNumber
-        //    };
-        //    //TODO:Add to API
-        //    //var orders = await _orderApiClient.CreateOrder(request.checkOut);
-        //    //if (orders != null)
-        //    //{
-        //    //    return Redirect("");
-        //    //}
-        //    TempData["SuccessMsg"] = "Order puschased successful";
-        //    return View(model);
-        //}
+        #endregion
+        #region "const all"
+
+        #endregion
         [HttpGet]
         public IActionResult GetListItems()
         {
@@ -72,7 +53,6 @@ namespace ShopHouse.Web.Controllers
             }
             return Ok(currentCart);
         }
-        [HttpPost]
         public async Task<IActionResult> AddToCart(int id, string languageId)
         {
             var product = await _productApiClient.GetById(id, languageId);
@@ -151,20 +131,60 @@ namespace ShopHouse.Web.Controllers
             HttpContext.Session.SetString(SystemConstants.CartSession, JsonConvert.SerializeObject(currentCart));
             return Ok(currentCart);
         }
-        //private CheckOutViewModel GetCheckOutViewMode()
-        //{
-        //    var session = HttpContext.Session.GetString(SystemConstants.CartSession);
-        //    List<CartItemViewModel> currentCart = new List<CartItemViewModel>();
-        //    if (session != null)
-        //    {
-        //        currentCart = JsonConvert.DeserializeObject<List<CartItemViewModel>>(session);
-        //    }
-        //    var checkoutVm = new CheckOutViewModel()
-        //    {
-        //        cartItems = currentCart,
-        //        checkOut = new CheckOutRequest()
-        //    };
-        //    return checkoutVm;
-        //}
+        [HttpPost]
+        public JsonResult TakePriceShipping(double price)
+        {
+            return Json(new { status = true });
+        }
+        [HttpGet]
+        public IActionResult CheckOut()
+        {
+            return View(GetCheckOutViewMode());
+        }
+        [HttpPost]
+        public async Task<IActionResult> CheckOut(CheckOutViewModel request)
+        {
+            var model = GetCheckOutViewMode();
+            var orderDetail = new List<OrderDetailVm>();
+            foreach (var item in model.cartItems)
+            {
+                orderDetail.Add(new OrderDetailVm()
+                {
+                    ProductId = item.ProductId,
+                    Quantity = item.Quantity
+                });
+            }
+            var checkoutRequest = new CheckOutRequest()
+            {
+                Address = request.checkOut.Address,
+                Email = request.checkOut.Email,
+                Name = request.checkOut.Name,
+                PhoneNumber = request.checkOut.PhoneNumber
+            };
+            //TODO:Add to API
+            //var orders = await _orderApiClient.CreateOrder(request.checkOut);
+            //if (orders != null)
+            //{
+            //    return Redirect("");
+            //}
+            TempData["SuccessMsg"] = "Order puschased successful";
+            return View(model);
+        }
+
+        private CheckOutViewModel GetCheckOutViewMode()
+        {
+            var session = HttpContext.Session.GetString(SystemConstants.CartSession);
+            List<CartItemViewModel> currentCart = new List<CartItemViewModel>();
+            if (session != null)
+            {
+                currentCart = JsonConvert.DeserializeObject<List<CartItemViewModel>>(session);
+            }
+            var checkoutVm = new CheckOutViewModel()
+            {
+                cartItems = currentCart,
+                checkOut = new CheckOutRequest()
+            };
+            return checkoutVm;
+        }
     }
 }

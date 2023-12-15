@@ -37,6 +37,10 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-xs-12">
                     <a class="btn btn-outline-info" asp-action="Create">Tạo sản phẩm</a>
+                    @* <form asp-action="ExporDataToFile" asp-controller="Product" method="post">
+                        <button type="submit" class="btn btn-outline-dark">Export To Excel</button>
+                    </form> *@
+                    <a asp-action="ExporDataToFile" class="btn btn-outline-dark">Export To Excel</a>
                 </div>
                 <div class="col-sm-12 col-md-6 col-xs-12">
                     <form asp-action="Index" method="get">

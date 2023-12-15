@@ -14,12 +14,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ShopHouse.Web.Controllers
 {
     public class HomeController : Controller
     {
+        #region Call Service
         private readonly ILogger<HomeController> _logger;
         // To localize backend strings inject SahredCultureLocalizer
         private readonly ISharedCultureLocalizer _loc;
@@ -38,20 +40,53 @@ namespace ShopHouse.Web.Controllers
             _productApiClient = productApiClient;
             _categoryApiClient = categoryApiClient;
         }
-
+        #endregion
+        #region Constant Value
+        private string culture = CultureInfo.CurrentCulture.Name;
+        #endregion
         public async Task<IActionResult> Index()
         {
-            var culture = CultureInfo.CurrentCulture.Name;
+            var product = await _productApiClient.GetAll(culture);
+
+            List<ProductVm> products = await GetNewProducts();
             //var msg = _loc.GetLocalizedString("Vietnamese");
-            var viewmodel = new HomeViewModel
+
+            return View(new HomeViewModel()
             {
-                slides = await _slideApiClient.GetAll(),
-                Featureproducts = await _productApiClient.GetfeaturedProducts(culture, SystemConstants.Productsettings.NumberOffFeaturedProduct),
-                Popularproducts = await _productApiClient.GetfeaturedProducts(culture, SystemConstants.Productsettings.NumberOffPopularproduct)
-            };
+                Newproducts = products.Where(x => x.DateCreated.Year.Equals(DateTime.Now.Year)).ToList(),
+            });
+        }
+        #region GET DATA
+        private async Task<List<ProductVm>> GetNewProducts()
+        {
+            List<ProductVm> productVms = await _productApiClient.GetAll(culture);
+
+            productVms.OrderByDescending(x => x.DateCreated).Take(9).ToList();
+
+            return productVms;
+        }
+        #endregion
+        public IActionResult Blog()
+        {
             return View();
         }
-        public IActionResult Login()
+        public IActionResult Collections()
+        {
+            return View();
+        }
+        public IActionResult ComingSoon()
+        {
+            return View();
+        }
+        public IActionResult About()
+        {
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            return View();
+        }
+        public IActionResult FAQs()
         {
             return View();
         }

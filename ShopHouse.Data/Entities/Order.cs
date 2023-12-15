@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ShopHouse.Data.Entities
 {
-   public class Order
+    public class Order
     {
         public int Id { set; get; }
         public DateTime OrderDate { set; get; }
@@ -15,6 +15,7 @@ namespace ShopHouse.Data.Entities
         public string ShipAddress { set; get; }
         public string ShipEmail { set; get; }
         public string ShipPhoneNumber { set; get; }
+        public string Remarks { set; get; }
         public OrderStatus Status { set; get; }
 
         public List<OrderDetail> OrderDetails { get; set; }

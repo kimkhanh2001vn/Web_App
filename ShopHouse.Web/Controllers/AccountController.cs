@@ -21,6 +21,7 @@ namespace ShopHouse.Web.Controllers
 {
     public class AccountController : Controller
     {
+        #region Call Service
         private readonly IUserApiClient _userApiClient;
         private readonly IConfiguration _configuration;
 
@@ -29,6 +30,8 @@ namespace ShopHouse.Web.Controllers
             _userApiClient = userApiClient;
             _configuration = configuration;
         }
+        #endregion
+
         [HttpGet]
         public IActionResult Login()
         {
@@ -79,10 +82,10 @@ namespace ShopHouse.Web.Controllers
         public async Task<IActionResult> Register(RegisterRequest request)
         {
             var culture = CultureInfo.CurrentCulture.Name;
-            //if (!ModelState.IsValid)
-            //{
-            //    return View(ModelState);
-            //}
+            if (!ModelState.IsValid)
+            {
+                return Redirect($"/{culture}/account/login");
+            }
             var result = await _userApiClient.RegisterUser(request);
             if (!result.IsSuccessed)
             {

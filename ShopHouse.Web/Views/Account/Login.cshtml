@@ -1,4 +1,5 @@
-﻿@{
+﻿@using ShopHouse.Utilities.Constants
+@{
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var culture = CultureInfo.CurrentCulture.Name;
@@ -94,49 +95,49 @@
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
                                                                     <label for="RegUserName" class="form-label">First Name *</label>
-                                                                    <input type="text" name="FirstName" class="form-control" id="RegUserName">
+                                                                    <input type="text" name="FirstName" class="form-control" id="RegUserName" title="@SystemConstants.requiredMess" required>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
                                                                     <label for="RegUserName" class="form-label">Last Name *</label>
-                                                                    <input type="text" name="LastName" class="form-control" id="RegUserName">
+                                                                    <input type="text" name="LastName" class="form-control" id="RegUserName" required>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
                                                                     <label for="RegUserName" class="form-label">Phone Number *</label>
-                                                                    <input type="number" name="PhoneNumber" class="form-control" id="RegUserName">
+                                                                    <input type="number" name="PhoneNumber" class="form-control" id="RegUserName" required>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
                                                                     <label for="RegUserName" class="form-label">Dob *</label>
-                                                                    <input type="date" name="Dob" class="form-control" id="RegUserName">
+                                                                    <input type="date" name="Dob" class="form-control" id="RegUserName" required>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
                                                                     <label for="email" class="form-label mt-15">Email address *</label>
-                                                                    <input type="email" name="Email" class="form-control" id="email">
+                                                                    <input type="email" name="Email" class="form-control" id="email" required>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
                                                                     <label for="RegUserName" class="form-label">Username *</label>
-                                                                    <input type="text" name="UserName" class="form-control" id="RegUserName">
+                                                                    <input type="text" name="UserName" class="form-control" id="RegUserName" required>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-12">
                                                                 <div class="form-group mb-0">
                                                                     <label for="regpassword" class="form-label mt-15">Password *</label>
-                                                                    <input type="password" name="Password" class="form-control" id="regpassword">
+                                                                    <input type="password" name="Password" class="form-control" id="regpassword" title="@SystemConstants.PasswordVal.notification" pattern="@SystemConstants.PasswordVal.regexPassword" required>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-12">
                                                                 <div class="form-group mb-0">
                                                                     <label for="regpassword" class="form-label mt-15">Confirm Password *</label>
-                                                                    <input type="password" name="ConfirmPassword" class="form-control" id="regpassword">
+                                                                    <input type="password" name="ConfirmPassword" class="form-control" title="@SystemConstants.PasswordVal.notification" pattern="@SystemConstants.PasswordVal.regexPassword" id="regpassword" required>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-12">

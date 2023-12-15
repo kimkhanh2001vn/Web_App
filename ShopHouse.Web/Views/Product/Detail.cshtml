@@ -6,213 +6,436 @@
 }
 @inject Microsoft.Extensions.Configuration.IConfiguration Configuration;
 @inject LazZiya.ExpressLocalization.ISharedCultureLocalizer _loc;
-<section class="page-info new-block">
-    <div class="fixed-bg" style="background: url('images/info-bg.jpg');"></div>
-    <div class="overlay"></div>
-    <div class="container">
-        <h2 localize-content>Domnoo Detail</h2>
-        <div class="clear-fix"></div>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#" localize-content>Home</a></li>
-            <li class="breadcrumb-item active"><a href="#" localize-content>Detail</a></li>
-        </ol>
-    </div>
-</section>
+@section Scripts{
+    <script>
+        var siteController = new SiteController();
+        siteController.initialize();
+    </script>
+}
+<!DOCTYPE html>
+<html lang="en">
+<body>
 
-<section class="about-product new-block">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <div class="img-holder">
-                    <a href="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)" title="@Model.Product.Name">
-                        <img src="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)" style="width:100%" alt="@Model.Product.Name" />
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="block-stl6">
-                    <h2>@Model.Product.Name <span class="veg veg-nonveg"></span></h2>
-                    <p class="price"><span>@Html.FormatValue(Model.Product.OriginalPrice, "{0:#,##0.00}")</span> <small>@Html.FormatValue(Model.Product.Price, "{0:#,##0.00}")</small> </p>
-                    <p class="rating-star"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <span>( 245 Ratings & 355 Reviews )</span> </p>
-                    <p class="ab-txt">@Model.Product.Description</p>
-                    <form action="#">
-                        <div class="form-block">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label>Size :</label>
-                                        <select class="c_select">
-                                            <option value="">Large</option>
-                                            <option value="">Medium</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label>Add toppings :</label>
-                                        <select class="c_select">
-                                            <option value="">Veggies</option>
-                                            <option value="">Medium</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label>Crust :</label>
-                                        <select class="c_select">
-                                            <option value="">Pan</option>
-                                            <option value="">Medium</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="form-group">
-                                        <label>Qty :</label>
-                                        <select class="c_select">
-                                            <option value="">01</option>
-                                            <option value="">02</option>
-                                            <option value="">03</option>
-                                            <option value="">04</option>
-                                            <option value="">05</option>
-                                            <option value="">06</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="form-group btn-block">
-                                        <a href="#" class="btn1 stl2">buy now</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="form-group btn-block">
-                                        <a href="#" class="btn1 stl1 btn-add-cart" data-id="@Model.Product.Id" >Add to Cart</a>
-                                    </div>
-                                </div>
+    <!--wrapper start-->
+    <div class="wrapper products-single-wrapper">
+        <!--== Start Header Wrapper ==-->
+        @await Component.InvokeAsync("SideBar")
+        <!--== End Header Wrapper ==-->
+        <main class="main-content site-wrapper-reveal">
+            <!--== Start Page Title Area ==-->
+            <section class="page-title-area bg-overlay-black2-6 bg-img" data-bg-img="assets/img/photos/bg-page1.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="page-title-content">
+                                <h2 class="title">Shop</h2>
+                                <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">></span></a><span class="active">Detail</span></div>
                             </div>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-</section>
-
-<div class="center-wrapper new-block">
-    <div class="fixed-bg parallax" style="background: url('images/ptrn1.jpg');"></div>
-    <div class="overlay"></div>
-    <div class="inner-wrapper">
-        <section class="about-product-block new-block">
-            <div class="container">
-                <div class="block-stl7">
-                    <h4 localize-content>About us :</h4>
-                    <p>
-                        @Model.Product.Details
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="related-products new-block">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="title">
-                            <p class="top-h">winter special offer</p>
-                            <h2>related products</h2>
-                            <div class="btm-style"><span><img src="images/btm-style.png" alt="" class="img-responsive"></span></div>
-                            <p class="bottom-p">Lorem ipsum dolor sit amet consectetur adipiscing elit. <br>Curabitur erat turpis posuere ac ante at</p>
                         </div>
                     </div>
-                    <div class="col-lg-12">
-                        <div class="item-slider2 owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="block-stl2">
-                                    <div class="img-holder">
-                                        <img src="images/img.png" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="text-block">
-                                        <h3>Veggie Supreme</h3>
-                                        <p class="sz">Size : Regular</p>
-                                        <p class="price"><span>$6.00</span> <del>$8.00 40% off</del></p>
-                                    </div>
-                                    <div class="btn-sec">
-                                        <a href="product_single.html" class="btn4">About More</a>
-                                        <a href="shopping_cart.html" class="btn4">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="block-stl2">
-                                    <div class="img-holder">
-                                        <img src="images/img3.png" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="text-block">
-                                        <h3>Veggie Supreme</h3>
-                                        <p class="sz">Size : Regular</p>
-                                        <p class="price"><span>$6.00</span> <del>$8.00 40% off</del></p>
-                                    </div>
-                                    <div class="btn-sec">
-                                        <a href="product_single.html" class="btn4">About More</a>
-                                        <a href="shopping_cart.html" class="btn4">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="block-stl2">
-                                    <div class="img-holder">
-                                        <img src="images/img4.png" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="text-block">
-                                        <h3>Veggie Supreme</h3>
-                                        <p class="sz">Size : Regular</p>
-                                        <p class="price"><span>$6.00</span> <del>$8.00 40% off</del></p>
-                                    </div>
-                                    <div class="btn-sec">
-                                        <a href="product_single.html" class="btn4">About More</a>
-                                        <a href="shopping_cart.html" class="btn4">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="block-stl2">
-                                    <div class="img-holder">
-                                        <img src="images/img2.png" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="text-block">
-                                        <h3>Veggie Supreme</h3>
-                                        <p class="sz">Size : Regular</p>
-                                        <p class="price"><span>$6.00</span> <del>$8.00 40% off</del></p>
-                                    </div>
-                                    <div class="btn-sec">
-                                        <a href="product_single.html" class="btn4">About More</a>
-                                        <a href="shopping_cart.html" class="btn4">Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="block-stl2">
-                                    <div class="img-holder">
-                                        <img src="images/img5.png" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="text-block">
-                                        <h3>Veggie Supreme</h3>
-                                        <p class="sz">Size : Regular</p>
-                                        <p class="price"><span>$6.00</span> <del>$8.00 40% off</del></p>
-                                    </div>
-                                    <div class="btn-sec">
-                                        <a href="product_single.html" class="btn4">About More</a>
-                                        <a href="shopping_cart.html" class="btn4">Add to Cart</a>
-                                    </div>
-                                </div>
+                </div>
+            </section>
+            <!--== End Page Title Area ==-->
+            <!--== Start Page Title Area ==-->
+            <div class="page-title-area page-title-area2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="page-title-content content-style-2">
+                                <div class="bread-crumbs"><a href="index.html">Home<span class="breadcrumb-sep">></span></a><a href="index.html">@Model.Category.Name<span class="breadcrumb-sep">></span></a><span class="active">Product Detail</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <!--== End Page Title Area ==-->
+            <!--== Start Shop Area ==-->
+            <section class="product-area shop-single-product">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="single-product-slider">
+                                <div class="product-dec-slider-right">
+                                    <div class="single-product-thumb">
+                                        <div class="single-product-thumb-slider">
+                                            <div class="zoom zoom-hover">
+                                                <div class="thumb-item">
+                                                    <a class="lightbox-image" data-fancybox="gallery" href="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)">
+                                                        <img src="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)" alt="@Model.Product.Name">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="zoom zoom-hover">
+                                                <div class="thumb-item">
+                                                    <a class="lightbox-image" data-fancybox="gallery" href="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)">
+                                                        <img src="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)" alt="@Model.Product.Name">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="zoom zoom-hover">
+                                                <div class="thumb-item">
+                                                    <a class="lightbox-image" data-fancybox="gallery" href="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)">
+                                                        <img src="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)" alt="@Model.Product.Name">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-gallery-actions">
+                                            <a class="lightbox-image" data-fancybox="gallery" href="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)">
+                                                <i class="lastudioicon-full-screen"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-dec-slider-left">
+                                    <div class="single-product-nav">
+                                        <div class="single-product-nav-slider">
+                                            <div class="nav-item">
+                                                <img src="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)" alt="@Model.Product.Name">
+                                            </div>
+                                            <div class="nav-item">
+                                                <img src="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)" alt="@Model.Product.Name">
+                                            </div>
+                                            <div class="nav-item">
+                                                <img src="@(Configuration["BaseAddressImg"] + Model.Product.ThumbnailImage)" alt="@Model.Product.Name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="single-product-info">
+                                <h4 class="title">@Model.Product.Name</h4>
+                                <div class="product-rating">
+                                    <div class="ratting-icons">
+                                        <i class="lastudioicon-star-rate-1"></i>
+                                        <i class="lastudioicon-star-rate-1"></i>
+                                        <i class="lastudioicon-star-rate-1"></i>
+                                        <i class="lastudioicon-star-rate-1"></i>
+                                        <i class="lastudioicon-star-rate-1"></i>
+                                    </div>
+                                    <div class="review">
+                                        <a href="#/">(1 customer review)</a>
+                                        <p><span></span>99 in stock</p>
+                                    </div>
+                                </div>
+                                <div class="prices">
+                                    <span class="price">@Html.FormatValue(Model.Product.OriginalPrice, "{0:#,##0.00}")</span>
+                                </div>
+                                <p class="product-desc">@Model.Product.Description</p>
+                                <div class="quick-product-action">
+                                    <div class="action-top">
+                                        <div class="pro-qty-area">
+                                            <div class="pro-qty">
+                                                <input type="text" id="quantity1" title="Quantity" value="1" />
+                                            </div>
+                                        </div>
+                                        <a class="btn-theme btn-black btn-add-cart" href="#" data-id="@Model.Product.Id" title="Add to cart">Add to cart</a>
+                                    </div>
+                                    <div class="action-bottom">
+                                        <a class="btn-wishlist" href="#"><i class="labtn-icon labtn-icon-wishlist"></i>Add to wishlist</a>
+                                        @* <a class="btn-compare" href="shop-compare.html"><i class="labtn-icon labtn-icon-compare"></i>Add to compare</a> *@
+                                    </div>
+                                </div>
+                                <div class="product-ratting">
+                                    <div class="product-sku">
+                                        SKU: <span>REF. LA-276</span>
+                                    </div>
+                                </div>
+                                <div class="product-categorys">
+                                    <div class="product-category">
+                                        Category: <span>@Model.Category.Name</span>
+                                    </div>
+                                </div>
+                                <div class="widget">
+                                    <h3 class="title">Tags:</h3>
+                                    <div class="widget-tags">
+                                        <ul>
+                                            <li><a href="shop.html">Blazer,</a></li>
+                                            <li><a href="shop.html">Fashion,</a></li>
+                                            <li><a href="shop.html">wordpress,</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-social-info">
+                                    <a href="#"><span class="lastudioicon-b-facebook"></span></a>
+                                    <a href="#"><span class="lastudioicon-b-twitter"></span></a>
+                                    <a href="#"><span class="lastudioicon-b-linkedin"></span></a>
+                                    <a href="#"><span class="lastudioicon-b-pinterest"></span></a>
+                                </div>
+                                <div class="product-nextprev">
+                                    <a href="shop-single-product.html">
+                                        <i class="lastudioicon-arrow-left"></i>
+                                    </a>
+                                    <a href="shop-single-product.html">
+                                        <i class="lastudioicon-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--== End Shop Area ==-->
+            <!--== Start Shop Tab Area ==-->
+            <section class="product-area product-description-review-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="product-description-review">
+                                <ul class="nav nav-tabs product-description-tab-menu" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="product-desc-tab" data-bs-toggle="tab" data-bs-target="#productDesc" type="button" role="tab" aria-controls="productDesc" aria-selected="true">Description</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="product-review-tab" data-bs-toggle="tab" data-bs-target="#productReview" type="button" role="tab" aria-controls="productReview" aria-selected="false">Reviews (1)</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content product-description-tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="productDesc" role="tabpanel" aria-labelledby="product-desc-tab">
+                                        <div class="product-desc">
+                                            <div class="product-desc-row">
+                                                <div class="product-thumb">
+                                                    <img src="assets/img/shop/93.jpg" alt="Moren-Shop">
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4>Made with love</h4>
+                                                    <p>Donec accumsan auctor iaculis. Sed suscipit arcu ligula, at egestas magna molestie a. Proin ac ex maximus, ultrices justo eget, sodales orci. Aliquam egestas libero ac turpis pharetra, in vehicula lacus scelerisque. Vestibulum ut sem laoreet, feugiat tellus at.</p>
+                                                    <p>Duis efficitur gravida tincidunt. Nam sodales vel odio at sollicitudin. Vestibulum sed rutrum nisl. Nulla diam arcu, facilisis nec blandit non, interdum et orci. Nam aliquam lorem vitae risus molestie convallis.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="productReview" role="tabpanel" aria-labelledby="product-review-tab">
+                                        <div class="product-review">
+                                            <div class="product-review-comments">
+                                                <h4 class="title">1 review for <span>Product Simple</span></h4>
+                                                <div class="comment-item">
+                                                    <div class="thumb">
+                                                        <img src="assets/img/icons/s1.jpg" alt="Moren-Shop">
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="rating">
+                                                            <span class="lastudioicon-star-rate-1"></span>
+                                                            <span class="lastudioicon-star-rate-1"></span>
+                                                            <span class="lastudioicon-star-rate-1"></span>
+                                                            <span class="lastudioicon-star-rate-1"></span>
+                                                            <span class="lastudioicon-star-rate-1"></span>
+                                                        </div>
+                                                        <h5 class="meta"><span>Agnes Wilson </span> – December 24, 2020</h5>
+                                                        <span class="review">There are no reviews yet.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-review-form">
+                                                <h3 class="title">Add a review</h3>
+                                                <div class="rating">
+                                                    <span class="rating-title">Your rating *</span>
+                                                    <span class="lastudioicon-star-rate-2"></span>
+                                                    <span class="lastudioicon-star-rate-2"></span>
+                                                    <span class="lastudioicon-star-rate-2"></span>
+                                                    <span class="lastudioicon-star-rate-2"></span>
+                                                    <span class="lastudioicon-star-rate-2"></span>
+                                                </div>
+                                                <form action="#" method="post">
+                                                    <div class="review-form-content">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="reviewFormTextarea">Your review *</label>
+                                                                    <textarea class="form-control" id="reviewFormTextarea" name="comment" rows="7" required></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <button class="btn btn-theme btn-black" type="submit">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--== End Shop Tab Area ==-->
+            <!--== Start Products Area Wrapper ==-->
+            <section class="product-area related-products-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 m-auto">
+                            <div class="section-title text-center">
+                                <h2 class="title">Related Products</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="swiper-container product4-slider-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <!-- Start Product Item -->
+                                        <div class="product-item">
+                                            <div class="product-thumb">
+                                                <a href="shop-single-product.html">
+                                                    <img src="assets/img/shop/9.jpg" alt="Moren-Shop">
+                                                    <span class="thumb-overlay"></span>
+                                                </a>
+                                                <div class="product-action action-style3">
+                                                    <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
+                                                        <i class="lastudioicon-shopping-cart-3"></i>
+                                                    </a>
+                                                    <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
+                                                        <i class="lastudioicon-search-zoom-in"></i>
+                                                    </a>
+                                                    <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
+                                                        <i class="lastudioicon-heart-2"></i>
+                                                    </a>
+                                                    <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
+                                                        <i class="lastudioicon-compare"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-info info-style3">
+                                                <div class="content-inner">
+                                                    <h4 class="title"><a href="shop-single-product.html">Printed surplice blouse</a></h4>
+                                                    <div class="prices">
+                                                        <span class="price">£17.90</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Product Item -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- Start Product Item -->
+                                        <div class="product-item">
+                                            <div class="product-thumb">
+                                                <a href="shop-single-product.html">
+                                                    <img src="assets/img/shop/83.jpg" alt="Moren-Shop">
+                                                    <span class="bg-thumb" data-bg-img="assets/img/shop/84.jpg" style="background-image: url(_assets/img/shop/d2-2.html);"></span>
+                                                    <span class="thumb-overlay"></span>
+                                                </a>
+                                                <div class="product-action action-style3">
+                                                    <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
+                                                        <i class="lastudioicon-shopping-cart-3"></i>
+                                                    </a>
+                                                    <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
+                                                        <i class="lastudioicon-search-zoom-in"></i>
+                                                    </a>
+                                                    <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
+                                                        <i class="lastudioicon-heart-2"></i>
+                                                    </a>
+                                                    <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
+                                                        <i class="lastudioicon-compare"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-info info-style3">
+                                                <div class="content-inner">
+                                                    <h4 class="title"><a href="shop-single-product.html">Double Breasted Blazer</a></h4>
+                                                    <div class="prices">
+                                                        <span class="price">£39.90</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Product Item -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- Start Product Item -->
+                                        <div class="product-item">
+                                            <div class="product-thumb">
+                                                <a href="shop-single-product.html">
+                                                    <img src="assets/img/shop/80.jpg" alt="Moren-Shop">
+                                                    <span class="bg-thumb" data-bg-img="assets/img/shop/81.jpg" style="background-image: url(_assets/img/shop/d2-2.html);"></span>
+                                                    <span class="thumb-overlay"></span>
+                                                </a>
+                                                <div class="product-action action-style3">
+                                                    <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
+                                                        <i class="lastudioicon-shopping-cart-3"></i>
+                                                    </a>
+                                                    <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
+                                                        <i class="lastudioicon-search-zoom-in"></i>
+                                                    </a>
+                                                    <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
+                                                        <i class="lastudioicon-heart-2"></i>
+                                                    </a>
+                                                    <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
+                                                        <i class="lastudioicon-compare"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-info info-style3">
+                                                <div class="content-inner">
+                                                    <h4 class="title"><a href="shop-single-product.html">Product Variable</a></h4>
+                                                    <div class="prices">
+                                                        <span class="price">£39.90</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Product Item -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- Start Product Item -->
+                                        <div class="product-item">
+                                            <div class="product-thumb">
+                                                <a href="shop-single-product.html">
+                                                    <img src="assets/img/shop/3.jpg" alt="Moren-Shop">
+                                                    <span class="thumb-overlay"></span>
+                                                </a>
+                                                <div class="product-action action-style3">
+                                                    <a class="action-cart ht-tooltip" data-tippy-content="Add to cart" href="shop-cart.html" title="Add to cart">
+                                                        <i class="lastudioicon-shopping-cart-3"></i>
+                                                    </a>
+                                                    <a class="action-quick-view ht-tooltip" data-tippy-content="Quick View" href="javascript:void(0);" title="Wishlist">
+                                                        <i class="lastudioicon-search-zoom-in"></i>
+                                                    </a>
+                                                    <a class="action-wishlist ht-tooltip" data-tippy-content="Add to wishlist" href="shop-wishlist.html" title="Add to wishlist">
+                                                        <i class="lastudioicon-heart-2"></i>
+                                                    </a>
+                                                    <a class="action-compare ht-tooltip" data-tippy-content="Add to compare" href="shop-compare.html" title="Add to compare">
+                                                        <i class="lastudioicon-compare"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="product-info info-style3">
+                                                <div class="content-inner">
+                                                    <h4 class="title"><a href="shop-single-product.html">Short lilac ruffled dress</a></h4>
+                                                    <div class="prices">
+                                                        <span class="price">£29.90</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Product Item -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--== End Products Area Wrapper ==-->
+        </main>
 
-
+        <!--== Start Footer Area Wrapper ==-->
+        @await Component.InvokeAsync("Footer")
+        <!--== End Footer Area Wrapper ==-->
+        <!--== Scroll Top Button ==-->
     </div>
-</div>
+
+</body>
+
+
+<!-- Mirrored from htmldemo.net/moren/moren/shop-single-product.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Sep 2023 04:38:41 GMT -->
+</html>

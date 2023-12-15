@@ -16,13 +16,13 @@ using System.Threading.Tasks;
 
 namespace ShopHouse.ApiIntegration
 {
-    public class ProductApiClient : BaseApiClient , IProductApiClient
+    public class ProductApiClient : BaseApiClient, IProductApiClient
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IConfiguration _configuration;
         public ProductApiClient(IHttpClientFactory httpClientFactory, IConfiguration configuration, IHttpContextAccessor httpContextAccessor)
-            : base(httpClientFactory,configuration,httpContextAccessor)
+            : base(httpClientFactory, configuration, httpContextAccessor)
         {
             _httpContextAccessor = httpContextAccessor;
             _configuration = configuration;
@@ -127,12 +127,19 @@ namespace ShopHouse.ApiIntegration
         {
             return await GetAsync<ProductVm>($"/api/products/{id}/{languageId}");
         }
+        public async Task<List<ProductVm>> GetAll(string languageId)
+        {
+            return await GetListAsync<ProductVm>($"/api/products/getall/{languageId}");
+        }
 
         public async Task<List<ProductVm>> GetfeaturedProducts(string languageId, int take)
         {
             return await GetListAsync<ProductVm>($"/api/products/featured/{languageId}/{take}");
         }
-
+        public async Task<ProductVm> UpdateViewCount(int id)
+        {
+            return await GetAsync<ProductVm>($"/api/products/viewcount/{id}");
+        }
         public async Task<PagedResult<ProductVm>> GetPagings(GetManageProductPagingRequest request)
         {
             return await GetAsync<PagedResult<ProductVm>>(
@@ -146,6 +153,11 @@ namespace ShopHouse.ApiIntegration
         public async Task<List<ProductVm>> GetPopularproducts(string languageId, int take)
         {
             return await GetListAsync<ProductVm>($"/api/products/popular/{languageId}/{take}");
+        }
+
+        public async Task<List<ProductVm>> GetBestSellerProducts(string languageId, int take)
+        {
+            return await GetListAsync<ProductVm>($"/api/products/bestseller/{languageId}/{take}");
         }
 
         public async Task<List<ProductVm>> ProductByCategories(string languageId, int take)

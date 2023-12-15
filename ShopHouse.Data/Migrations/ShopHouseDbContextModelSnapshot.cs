@@ -180,7 +180,7 @@ namespace ShopHouse.Data.Migrations
                         new
                         {
                             Id = new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"),
-                            ConcurrencyStamp = "252cc1d7-43e8-4fb7-a2e7-f40b80a9ee5b",
+                            ConcurrencyStamp = "044a6187-c109-4dcc-9803-c62f717a34c2",
                             Description = "Administrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -257,7 +257,7 @@ namespace ShopHouse.Data.Migrations
                         {
                             Id = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8ced6b4b-17dd-4783-ae76-7df4872112b9",
+                            ConcurrencyStamp = "28ccb72e-27fd-4cdb-8759-107f06956080",
                             Dob = new DateTime(2020, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "tedu.international@gmail.com",
                             EmailConfirmed = true,
@@ -266,7 +266,7 @@ namespace ShopHouse.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "tedu.international@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKP7G27xjFA5AeHIOUul48Kyt4dzEF1E5skX5lkdFTqNPdFV8nnXgCnAPYgUBnjxpQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEQbOaGmjt6AjsG2wdHW2JW09TViFc9b/9V1lzEH/csoBCkC08YqtGXvcO5I2hpeXA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -520,6 +520,9 @@ namespace ShopHouse.Data.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Remarks")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ShipAddress")
                         .IsRequired()
                         .HasColumnType("nvarchar(200)")
@@ -614,7 +617,7 @@ namespace ShopHouse.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2023, 10, 21, 19, 30, 48, 517, DateTimeKind.Local).AddTicks(2549),
+                            DateCreated = new DateTime(2023, 12, 11, 20, 53, 47, 731, DateTimeKind.Local).AddTicks(3844),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,

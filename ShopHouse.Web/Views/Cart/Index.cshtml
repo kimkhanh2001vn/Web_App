@@ -60,12 +60,13 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="cart-table-wrap">
                                     <div class="cart-table table-responsive">
                                         <table>
                                             <thead>
                                                 <tr>
-                                                    <th class="pro-remove"> </th>
+                                                    <th class="pro-remove"></th>
                                                     <th class="pro-thumbnail"> </th>
                                                     <th class="pro-name">Product</th>
                                                     <th class="pro-price">Price</th>
@@ -82,7 +83,7 @@
                                         <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Coupon code">
                                         <button type="submit" class="button" name="apply_coupon" value="Apply coupon">Apply coupon</button>
                                     </div>
-                                    <button type="submit" class="button" name="apply_coupon" value="Apply coupon">Update cart</button>
+                                @* <button type="submit" class="btn-edit button" name="apply_coupon" value="Apply coupon">Update cart</button> *@
                                 </div>
                             </div>
                             <div class="col-lg-4">
@@ -93,7 +94,7 @@
                                             <tbody>
                                                 <tr>
                                                     <th>Subtotal</th>
-                                                <td><span id="lb_total" class="amount"></span></td>
+                                                <td><span id="totalNotshipping" class="amount">@ViewBag.TotalCart</span></td>
                                                 </tr>
                                                 <tr class="shipping-totals">
                                                     <th>Shipping</th>
@@ -101,27 +102,27 @@
                                                         <ul>
                                                             <li>
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                                    <label class="form-check-label" for="flexRadioDefault1">Flat rate: <span class="amount">£50.00</span></label>
+                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="1" id="flexRadioDefault1">
+                                                                    <label class="form-check-label" for="flexRadioDefault1">Phí Ship Cố Định: <span class="amount">50.000 VND</span></label>
                                                                 </div>
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                                                    <label class="form-check-label" for="flexRadioDefault2">Local pickup</label>
+                                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="2" id="flexRadioDefault2">
+                                                                    <label class="form-check-label" for="flexRadioDefault2">Nhận hàng tại cửa hàng</label>
                                                                 </div>
                                                             </li>
                                                         </ul>
-                                                        <p>Shipping options will be updated during checkout.</p>
-                                                        <p>Calculate shipping</p>
+                                                    <p>Tùy chọn vận chuyển sẽ được cập nhật trong quá trình thanh toán.</p>
+                                                    <p>Tính toán vận chuyển</p>
                                                     </td>
                                                 </tr>
                                                 <tr class="amount-total">
                                                     <th>Total</th>
-                                                    <td><span class="amount">£197.00</span></td>
+                                                <td><span id="totalShipping" class="amount">@ViewBag.TotalCart</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                    <a class="btn-theme" href="shop-checkout.html">Proceed to Checkout</a>
+                                <a class="btn-theme" id="btn-checkout" href="/@culture/Cart/Checkout">Tiến Trình Thanh Toán</a>
                                 </div>
                             </div>
                         </div>

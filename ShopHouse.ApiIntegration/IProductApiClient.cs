@@ -14,9 +14,12 @@ namespace ShopHouse.ApiIntegration
         Task<bool> CreateProduct(ProductCreateRequest request);
         Task<bool> UpdateProduct(ProductUpdateRequest request);
         Task<ProductVm> GetById(int id, string languageId);
-        Task<ApiResult<bool>> CategoryAssign(int id,CategoryAssignRequest request);
+        Task<ProductVm> UpdateViewCount(int id);
+        Task<List<ProductVm>> GetAll(string languageId);
+        Task<ApiResult<bool>> CategoryAssign(int id, CategoryAssignRequest request);
         Task<List<ProductVm>> GetfeaturedProducts(string languageId, int take);
         Task<List<ProductVm>> GetPopularproducts(string languageId, int take);
         Task<List<ProductVm>> ProductByCategories(string languageId, int take);
+        Task<List<ProductVm>> GetBestSellerProducts(string languageId, int take);
     }
 }

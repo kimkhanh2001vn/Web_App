@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ShopHouse.Application.Catalog.Products;
+using ShopHouse.Data.Entities;
 using ShopHouse.ViewModels.Catalog.Products;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,7 @@ namespace ShopHouse.BackendApi.Controllers
         //https://locahost:port/product
         [HttpGet("paging")]
         [AllowAnonymous]
-        public async Task<IActionResult> GetAllPaging([FromQuery]GetManageProductPagingRequest request)
+        public async Task<IActionResult> GetAllPaging([FromQuery] GetManageProductPagingRequest request)
         {
             var products = await _productService.GetAllPaging(request);
             return Ok(products);
@@ -47,20 +48,31 @@ namespace ShopHouse.BackendApi.Controllers
         public async Task<IActionResult> GetById(int id, string languageId)
         {
             var product = await _productService.GetById(id, languageId);
-            if(product == null)
+            if (product == null)
+            {
+                return BadRequest("cannot find product");
+            }
+            return Ok(product);
+        }
+        [HttpGet("getall/{languageId}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetAll(string languageId)
+        {
+            var product = await _productService.GetAll(languageId);
+            if (product == null)
             {
                 return BadRequest("cannot find product");
             }
             return Ok(product);
         }
         [HttpPut("{id}/categories")]
-        public async Task<IActionResult> CategoryAssign(int id,[FromBody] CategoryAssignRequest request)
+        public async Task<IActionResult> CategoryAssign(int id, [FromBody] CategoryAssignRequest request)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            var result = await _productService.CategoryAssign(id,request);
+            var result = await _productService.CategoryAssign(id, request);
             if (!result.IsSuccessed)
             {
                 return BadRequest(result);
@@ -80,11 +92,11 @@ namespace ShopHouse.BackendApi.Controllers
                 return BadRequest();
 
             var product = await _productService.GetById(productId, request.LanguageId);
-            return CreatedAtAction(nameof(GetById), new { id = productId }, product);  
+            return CreatedAtAction(nameof(GetById), new { id = productId }, product);
         }
         [HttpPut("{productId}")]
         [Consumes("multipart/form-data")]
-        public async Task<IActionResult> Update([FromRoute]int productId, [FromForm] ProductUpdateRequest request)
+        public async Task<IActionResult> Update([FromRoute] int productId, [FromForm] ProductUpdateRequest request)
         {
             if (!ModelState.IsValid)
             {
@@ -110,9 +122,9 @@ namespace ShopHouse.BackendApi.Controllers
             return Ok();
         }
         [HttpPut("price/{id}/{newPrice}")]
-        public async Task<IActionResult> UpdatePrice([FromForm]int id, decimal newPrice)
+        public async Task<IActionResult> UpdatePrice([FromForm] int id, decimal newPrice)
         {
-            var isSuccessful = await _productService.UpdatePrice(id,newPrice);
+            var isSuccessful = await _productService.UpdatePrice(id, newPrice);
             if (isSuccessful)
             {
                 return Ok();
@@ -122,6 +134,13 @@ namespace ShopHouse.BackendApi.Controllers
                 return BadRequest();
             }
         }
+        [HttpGet("viewcount/{id}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> AddViewCount(int id)
+        {
+            await _productService.AddViewCount(id);
+            return Ok();
+        }
         [HttpGet("featured/{languageId}/{take}")]
         [AllowAnonymous]
         public async Task<IActionResult> GetfeaturedProducts(string languageId, int take)
@@ -129,6 +148,14 @@ namespace ShopHouse.BackendApi.Controllers
             var products = await _productService.GetfeaturedProducts(languageId, take);
             return Ok(products);
         }
+        [HttpGet("bestseller/{languageId}/{take}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetBestSellerProducts(string languageId, int take)
+        {
+            var products = await _productService.GetBestSellerProducts(languageId, take);
+            return Ok(products);
+        }
+
         [HttpGet("popular/{languageId}/{take}")]
         [AllowAnonymous]
         public async Task<IActionResult> GetpopularProducts(string languageId, int take)

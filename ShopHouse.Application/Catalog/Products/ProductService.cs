@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ValueGeneration.Internal;
 using ShopHouse.Application.Common;
 using ShopHouse.Data.EF;
 using ShopHouse.Data.Entities;
@@ -9,6 +10,7 @@ using ShopHouse.ViewModels.Catalog.Products;
 using ShopHouse.ViewModels.Common;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http.Headers;
@@ -130,7 +132,7 @@ namespace ShopHouse.Application.Catalog.Products
         public async Task<int> Delete(int productId)
         {
             var product = await _context.Products.FindAsync(productId);
-            if (product == null) throw new ShopHouseException($"Cannot Find a Product : { productId }");
+            if (product == null) throw new ShopHouseException($"Cannot Find a Product : {productId}");
 
             var thumbnailImage = _context.ProductImages.Where(i => i.ProductId == productId);
             foreach (var item in thumbnailImage)
@@ -223,7 +225,7 @@ namespace ShopHouse.Application.Catalog.Products
         {
             //1.select join
             var query = from p in _context.Products
-                        join pt in _context.ProductTranslations on p.Id equals pt.ProductId 
+                        join pt in _context.ProductTranslations on p.Id equals pt.ProductId
                         join pic in _context.ProductInCategories on p.Id equals pic.ProductId into ppic
                         from pic in ppic.DefaultIfEmpty()
                         join c in _context.Categories on pic.CategoryId equals c.Id into picc
@@ -249,9 +251,9 @@ namespace ShopHouse.Application.Catalog.Products
                     Id = x.p.Id,
                     Name = x.pt.Name,
                     DateCreated = x.p.DateCreated,
-                    Description =  x.pt.Description,
+                    Description = x.pt.Description,
                     Details = x.pt.Details,
-                    LanguageId =  x.pt.LanguageId,
+                    LanguageId = x.pt.LanguageId,
                     OriginalPrice = x.p.OriginalPrice,
                     Price = x.p.Price,
                     SeoAlias = x.pt.SeoAlias,
@@ -301,6 +303,43 @@ namespace ShopHouse.Application.Catalog.Products
                 categories = categories
             };
             return productviewmodel;
+        }
+
+        public async Task<List<ProductVm>> GetBestSellerProducts(string languageId, int take)
+        {
+            var query = from p in _context.Products
+                        join pt in _context.ProductTranslations on p.Id equals pt.ProductId
+                        join pic in _context.ProductInCategories on p.Id equals pic.ProductId into ppic
+                        from pic in ppic.DefaultIfEmpty()
+                        join pi in _context.ProductImages on p.Id equals pi.ProductId into ppi
+                        from pi in ppi.DefaultIfEmpty()
+                        join c in _context.Categories on pic.CategoryId equals c.Id into picc
+                        from c in picc.DefaultIfEmpty()
+                        join od in _context.OrderDetails on p.Id equals od.ProductId into odp
+                        from od in odp.DefaultIfEmpty()
+                        where pt.LanguageId == languageId
+                        && (pi == null || pi.IsDefault == true)
+                        select new { p, pt, pic, pi, c, od };
+
+            var data = await query.OrderByDescending(x => x.p.DateCreated)
+                .Take(take)
+                .Select(x => new ProductVm()
+                {
+                    Id = x.p.Id,
+                    Name = x.pt.Name,
+                    DateCreated = x.p.DateCreated,
+                    Description = x.pt.Description,
+                    Details = x.pt.Details,
+                    LanguageId = x.pt.LanguageId,
+                    OriginalPrice = x.p.OriginalPrice,
+                    Price = x.p.Price,
+                    SeoAlias = x.pt.SeoAlias,
+                    SeoDescription = x.pt.SeoDescription,
+                    SeoTitle = x.pt.SeoTitle,
+                    ViewCount = x.p.ViewCount,
+                    ThumbnailImage = x.pi.ImagePath
+                }).ToListAsync();
+            return data;
         }
 
         public async Task<List<ProductVm>> GetfeaturedProducts(string languageId, int take)
@@ -407,7 +446,7 @@ namespace ShopHouse.Application.Catalog.Products
         public async Task<int> Update(ProductUpdateRequest request)
         {
             var product = await _context.Products.FindAsync(request.Id);
-            var productTranslation = await _context.ProductTranslations.FirstOrDefaultAsync(x => x.ProductId == request.Id 
+            var productTranslation = await _context.ProductTranslations.FirstOrDefaultAsync(x => x.ProductId == request.Id
             && x.LanguageId == request.LanguageId);
             if (product == null || productTranslation == null)
             {

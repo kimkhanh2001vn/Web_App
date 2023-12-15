@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     var culture = CultureInfo.CurrentCulture.Name;
 }
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration;
 @inject LazZiya.ExpressLocalization.ISharedCultureLocalizer _loc;
 @section Scripts{
     <script>
@@ -53,10 +54,10 @@
                         <div class="sidebar-area inner-right-padding shop-sidebar-area">
                             <div class="widget">
                                 <div class="widget-search-box">
-                                    <form action="#" method="post">
+                                    <form action="/@culture/product/Category" method="post">
                                         <div class="form-input-item">
-                                            <label for="search2" class="sr-only">Search Here</label>
-                                            <input type="text" id="search2" placeholder="Search entire store…">
+                                            <label for="search2" class="sr-only">Tìm kiếm</label>
+                                            <input type="text" name="keyword" value="@ViewBag.keyword" placeholder="nhập từ khóa để tìm kiếm…">
                                             <button type="submit" class="btn-src">
                                                 <i class="icofont-search-1"></i>
                                             </button>
@@ -268,7 +269,7 @@
                                                 <div class="product-item">
                                                     <div class="product-thumb">
                                                         <a href="shop-single-product.html">
-                                                            <img src="~/assets/img/shop/13.jpg" alt="@item.Name">
+                                                            <img src="@(Configuration["BaseAddressImg"] + item.ThumbnailImage)" alt="@item.Name">
                                                             <span class="thumb-overlay"></span>
                                                         </a>
                                                         <div class="product-action action-style3">
